@@ -1,0 +1,326 @@
+# TART 🎨
+
+<p align="center">
+  <strong>Terminal Art for Artisan</strong><br>
+  <em>A beautiful, expressive terminal UI toolkit for PHP console applications</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/php-%5E8.0-blue" alt="PHP Version">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/badge/version-1.1.0-brightgreen" alt="Version">
+</p>
+
+---
+
+## Why TART?
+
+Transform boring CLI commands into beautiful, professional applications with styled output, themed blocks, automatic logo generation, and more. Make your terminal applications a joy to use and a work of art!
+
+```php
+$this->displayTextLogo('MY APP', 'box', ['text_color' => 'cyan']);
+$this->say('Processing data...');
+$this->good('✓ Step 1 complete');
+$this->success('🎉 Deployment complete!');
+```
+
+## ✨ Features
+
+- 🎨 **Rich Formatting** - Colored text, backgrounds, and styled blocks
+- 📦 **Block Messages** - Beautiful success, warning, error, and info blocks
+- 🏷️ **Automatic Logos** - Create branded ASCII art logos with one line of code
+- 🎭 **Theme System** - Built-in themes or create your own
+- 📊 **Progress Indicators** - Build output line-by-line with columns
+- 🔧 **Framework Agnostic** - Works with Laravel, Symfony, or standalone
+- ✨ **Emoji Support** - Full multi-byte UTF-8 character support
+- 🧩 **Modular** - Use only what you need with traits
+- ⚡ **Easy API** - Simple, expressive, intuitive
+
+## Installation
+
+```bash
+composer require profss/tart
+```
+
+## Quick Start
+
+### Laravel
+
+```php
+<?php
+
+namespace App\Console\Commands;
+
+use Profss\Tart\Laravel\StyledCommand;
+
+class DeployCommand extends StyledCommand
+{
+    protected $signature = 'app:deploy';
+    
+    public function handle()
+    {
+        // Beautiful branded logo
+        $this->displayTextLogo('DEPLOYMENT SYSTEM', 'box', [
+            'text_color' => 'cyan',
+        ]);
+        
+        $this->br();
+        
+        // Progress tracking
+        $this->openLine('Building application');
+        // ... work ...
+        $this->appendLine(' ✓', 'green');
+        $this->closeLine();
+        
+        $this->openLine('Running tests');
+        // ... work ...
+        $this->appendLine(' ✓', 'green');
+        $this->closeLine();
+        
+        // Success finish
+        $this->br();
+        $this->success('🎉 Deployment Complete!');
+        
+        return self::SUCCESS;
+    }
+}
+```
+
+### Example Usage
+
+See the complete example in [examples/laravel-example.php](examples/laravel-example.php)
+
+## 📖 Core Features
+
+### Basic Output
+
+```php
+$this->say('Regular message');
+$this->good('✓ Success message');         // Green
+$this->bad('✗ Error message');            // Red
+$this->state('⚠ Status message');         // Yellow
+$this->cool('ℹ Info message');            // Cyan
+```
+
+### Block Messages
+
+```php
+$this->header('Processing');              // Large header
+$this->title('Section Title');            // Title block
+$this->success('Operation succeeded!');   // Green block
+$this->warning('Check this issue');       // Red block
+$this->notice('Important info');          // Cyan block
+$this->failure('Operation failed');       // Error block
+$this->stat('Completed in 2.5s');        // Stat block
+$this->footer('Process', 'Time: 2.5s');  // Footer
+```
+
+### Logo Creation 🎨
+
+```php
+// Simple text logo
+$this->displayTextLogo('MY APP');
+
+// Boxed logo (emphasis)
+$this->displayTextLogo('DEPLOYMENT', 'box', [
+    'text_color' => 'green',
+]);
+
+// Banner logo (separators)
+$this->displayTextLogo('BUILD COMPLETE', 'banner');
+
+// Custom ASCII art
+$asciiArt = <<<'ASCII'
+  ____  ____   ___  _____  ____ 
+ |  _ \|  _ \ / _ \|  ___/ ___| 
+ | |_) | |_) | | | | |_  \___ \ 
+ |  __/|  _ <| |_| |  _|  ___) |
+ |_|   |_| \_\\___/|_|   |____/ 
+ASCII;
+
+$this->displayAsciiLogo($asciiArt, [
+    'colors' => ['cyan', 'blue', 'white'],
+]);
+```
+
+### Line Building & Columns
+
+```php
+// Progressive output
+$this->openLine('Processing users');
+// ... do work ...
+$this->appendLine(' ✓ Done', 'green');
+$this->closeLine();
+
+// Table-like columns
+$this->openLine('User');
+$this->addColumn('John Doe', 25, 'white');
+$this->addColumn('Active', 15, 'green');
+$this->addColumn('Admin', 10, 'cyan');
+$this->closeLine();
+```
+
+### Layout
+
+```php
+$this->br();        // Blank line
+$this->br(3);       // 3 blank lines
+$this->hr();        // Horizontal rule
+```
+
+## 🎨 Themes
+
+```php
+use Profss\Tart\Themes\{DefaultTheme, SuccessTheme, ErrorTheme, Theme};
+
+// Use built-in theme
+$this->setTheme(new SuccessTheme());
+$this->header('Success Operations');
+
+// Create custom theme
+$theme = new Theme(
+    color: 'purple',
+    textColor: 'white',
+    highlightColor: 'yellow',
+    maxLineWidth: 80
+);
+$this->setTheme($theme);
+```
+
+**Built-in Themes:**
+- `DefaultTheme` - Blue (general use)
+- `SuccessTheme` - Green (success operations)
+- `ErrorTheme` - Red (error handling)
+
+## 📚 Documentation
+
+- **[Getting Started](docs/GETTING-STARTED.md)** - Installation and first steps
+- **[Quick Reference](docs/guides/QUICK-REFERENCE.md)** - Complete API reference
+- **[Logo Creation](docs/guides/LOGO-CREATION.md)** - Logo generation guide
+- **[Examples](examples/)** - Working code examples
+
+## 💻 Examples
+
+Check out the complete working example:
+
+```bash
+# See the example file
+cat examples/laravel-example.php
+```
+
+## 💡 Use Cases
+
+### Application Branding
+
+```php
+public function handle()
+{
+    $this->displayTextLogo('PROFSS PLATFORM', 'box', [
+        'text_color' => 'cyan',
+    ]);
+    
+    // ... application logic ...
+}
+```
+
+### Progress Tracking
+
+```php
+$items = ['Users', 'Posts', 'Comments'];
+
+foreach ($items as $item) {
+    $this->openLine("Processing {$item}");
+    // ... process ...
+    $this->appendLine(' ✓', 'green');
+    $this->closeLine();
+}
+```
+
+### Status Reports
+
+```php
+$this->say('System Status:');
+$this->good('✓ Database: Connected');
+$this->good('✓ Cache: Operational');
+$this->bad('✗ API: Connection timeout');
+$this->stat('Report generated in 1.2s');
+```
+
+### Themed Operations
+
+```php
+$this->setTheme(new SuccessTheme());
+$this->header('Deployment');
+// ... deployment logic ...
+$this->displayTextLogo('SUCCESS', 'banner', [
+    'text_color' => 'green',
+]);
+```
+
+## 🏗️ Architecture
+
+TART uses a modular trait-based architecture:
+
+- **HasColoredOutput** - Basic colored text output
+- **HasBlocks** - Block-style formatted messages
+- **HasLineBuilding** - Build lines incrementally
+- **HasInteractivity** - Interactive prompts
+
+Mix and match traits in your own classes for maximum flexibility.
+
+## 🧪 Testing
+
+```bash
+composer install
+composer test
+```
+
+## Requirements
+
+- **PHP** 8.0 or higher
+- **Symfony Console** 5.0+ or 6.0+
+- **Laravel** 9.0+ (for Laravel integration)
+- **mbstring extension** (standard in most PHP installations)
+
+## 📦 What's Included
+
+- ✅ 15+ output methods
+- ✅ 7 block message types
+- ✅ 3 logo styles (standard, box, banner)
+- ✅ Theme system with 3 built-in themes
+- ✅ Multi-byte character support (emojis!)
+- ✅ Unit and integration tests
+- ✅ Complete documentation
+- ✅ Working examples
+
+## 🤝 Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## 🙏 Credits
+
+Developed by the Profss team. Extracted from internal tooling and open-sourced for the community.
+
+## 🔗 Resources
+
+- **Getting Started:** [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md)
+- **Quick Reference:** [docs/guides/QUICK-REFERENCE.md](docs/guides/QUICK-REFERENCE.md)
+- **Logo Creation:** [docs/guides/LOGO-CREATION.md](docs/guides/LOGO-CREATION.md)
+- **Examples:** [examples/laravel-example.php](examples/laravel-example.php)
+
+---
+
+<p align="center">
+  <strong>Make your CLI applications beautiful with Terminal Art! 🎨✨</strong>
+</p>
+
+<p align="center">
+  <a href="docs/GETTING-STARTED.md">Get Started</a> •
+  <a href="docs/guides/QUICK-REFERENCE.md">API Reference</a> •
+  <a href="docs/guides/LOGO-CREATION.md">Logos</a> •
+  <a href="examples/laravel-example.php">Examples</a>
+</p>
