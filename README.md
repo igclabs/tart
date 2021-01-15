@@ -39,7 +39,7 @@ $this->success('🎉 Deployment complete!');
 ## Installation
 
 ```bash
-composer require profss/tart
+composer require igclabs/tart
 ```
 
 ## Quick Start
