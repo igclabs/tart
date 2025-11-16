@@ -28,6 +28,16 @@ $this->good('✓ Step 1 complete');
 $this->success('🎉 Deployment complete!');
 ```
 
+## 📸 Examples in Action
+
+<p align="center">
+  <img src="https://www.intelligentgraphicandcode.com/storage/img/tart-example-1_1763324914.png" alt="TART Example 1" width="600">
+</p>
+
+<p align="center">
+  <img src="https://www.intelligentgraphicandcode.com/storage/img/tart-example-2_1763324897.png" alt="TART Example 2" width="600">
+</p>
+
 ## ✨ Features
 
 - 🎨 **Rich Formatting** - Colored text, backgrounds, and styled blocks
@@ -205,12 +215,29 @@ $this->setTheme($theme);
 
 ## 💻 Examples
 
-Check out the complete working example:
+Check out the working examples in the `examples/` directory:
 
+### Quick Demo
 ```bash
-# See the example file
+# Basic demo showing common features
+cat examples/demo-command.php
+```
+
+### Comprehensive Demo
+```bash
+# Full showcase of all TART capabilities
+cat examples/comprehensive-demo.php
+```
+
+### Laravel Integration
+```bash
+# Complete Laravel command example
 cat examples/laravel-example.php
 ```
+
+**Try it yourself:**
+1. Copy any example to your Laravel `app/Console/Commands/` directory
+2. Run `php artisan tart:demo` to see TART in action!
 
 ## 💡 Use Cases
 
@@ -314,7 +341,7 @@ Developed by the [IGC team](https://www.intelligentgraphicandcode.com/). Extract
 - **Getting Started:** [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md)
 - **Quick Reference:** [docs/guides/QUICK-REFERENCE.md](docs/guides/QUICK-REFERENCE.md)
 - **Logo Creation:** [docs/guides/LOGO-CREATION.md](docs/guides/LOGO-CREATION.md)
-- **Examples:** [examples/laravel-example.php](examples/laravel-example.php)
+- **Examples:** [examples/README.md](examples/README.md)
 
 ---
 
@@ -326,5 +353,5 @@ Developed by the [IGC team](https://www.intelligentgraphicandcode.com/). Extract
   <a href="docs/GETTING-STARTED.md">Get Started</a> •
   <a href="docs/guides/QUICK-REFERENCE.md">API Reference</a> •
   <a href="docs/guides/LOGO-CREATION.md">Logos</a> •
-  <a href="examples/laravel-example.php">Examples</a>
+  <a href="examples/README.md">Examples</a>
 </p>

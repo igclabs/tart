@@ -109,6 +109,42 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     }
 
     /**
+     * Display a comprehensive demo of all TART features.
+     * 
+     * This method showcases the most common TART features in a single call.
+     * Perfect for testing, demonstrations, and learning what TART can do.
+     */
+    public function demo(): void
+    {
+        // Logo
+        $this->logoBlock();
+
+        // Header
+        $this->header('Processing');
+
+        // Basic output
+        $this->say('Processing data...');
+        $this->good('✓ Step 1 complete');
+
+        $this->br();
+
+        // Title block
+        $this->title('Section Title');
+
+        // Block messages
+        $this->success('Operation succeeded!');
+        $this->warning('Check this issue');
+        $this->notice('Important info');
+        $this->failure('Operation failed');
+
+        // Final success
+        $this->success('Deployment complete!');
+
+        // Footer
+        $this->footer('Process', 'Time: 2.5s');
+    }
+
+    /**
      * Display the TART logo (Terminal Art for Artisan).
      * Each letter is colored: T=Red, A=Blue, R=Green, T=Yellow
      */

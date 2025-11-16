@@ -101,6 +101,10 @@ if ($this->confirm('Continue?', true)) {
 // Auto-answer mode (non-interactive)
 $this->autoAnswer = true;
 $result = $this->confirm('Auto?', true);  // Returns true without prompting
+
+// Display built-in demo (great for testing and showcasing)
+$this->demo();                           // Shows all common TART features
+$this->demoText();                       // Shows all text style variations
 ```
 
 ## 🎨 Color Helpers (Protected Methods)
@@ -162,13 +166,29 @@ class MyCommand extends StyledCommand
 }
 ```
 
-## 💻 Example
+## 💻 Examples
 
-Check out the complete working example:
+Check out the complete working examples:
 
 ```bash
-# View the example file
+# Quick demo
+cat examples/demo-command.php
+
+# Comprehensive demo with all features
+cat examples/comprehensive-demo.php
+
+# Real-world Laravel example
 cat examples/laravel-example.php
+```
+
+Or call the built-in demo directly in any command:
+
+```php
+public function handle()
+{
+    $this->demo();  // Displays comprehensive feature showcase
+    return self::SUCCESS;
+}
 ```
 
 ## 🎨 Available Colors
@@ -189,6 +209,7 @@ cat examples/laravel-example.php
 3. **Theme per operation type** - Switch themes for different operations
 4. **Auto-answer for scripts** - Set `$this->autoAnswer = true` for cron jobs
 5. **Path highlighting** - Makes file paths easy to read
+6. **Call `demo()` to test** - Built-in demo shows all features in action
 
 ## 📚 More Info
 
