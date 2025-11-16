@@ -207,6 +207,15 @@ Current priorities:
 7. **Review** - Address feedback
 8. **Merge** - Celebrate! 🎉
 
+## Release Workflow
+
+1. Make sure `composer test` passes and `CHANGELOG.md` documents the release.
+2. Run `./release.sh "your commit message"` from the project root.
+3. The script bumps the patch version in `version.txt`, commits, tags (`vX.Y.Z`), and pushes to every available `origin`/`gitlab` remote.
+4. Publish the tag on GitHub/Packagist as needed—Packagist will pick up the new tag automatically.
+
+> The commit message argument is optional; the script falls back to `Increase version number to X.Y.Z` when omitted.
+
 ## Questions?
 
 Feel free to open an issue for any questions about contributing!
