@@ -1,9 +1,9 @@
 <?php
 
-namespace Profss\Tart\Concerns;
+namespace IGC\Tart\Concerns;
 
-use Profss\Tart\Support\ColorHelper;
-use Profss\Tart\Support\LineFormatter;
+use IGC\Tart\Support\ColorHelper;
+use IGC\Tart\Support\LineFormatter;
 
 trait HasColoredOutput
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace Profss\Tart\Laravel;
+namespace IGC\Tart\Laravel;
 
 use Illuminate\Console\Command;
-use Profss\Tart\Concerns\HasBlocks;
-use Profss\Tart\Concerns\HasColoredOutput;
-use Profss\Tart\Concerns\HasInteractivity;
-use Profss\Tart\Concerns\HasLineBuilding;
-use Profss\Tart\Contracts\StyledCommandInterface;
-use Profss\Tart\Contracts\ThemeInterface;
-use Profss\Tart\Support\AsciiArt;
-use Profss\Tart\Themes\DefaultTheme;
+use IGC\Tart\Concerns\HasBlocks;
+use IGC\Tart\Concerns\HasColoredOutput;
+use IGC\Tart\Concerns\HasInteractivity;
+use IGC\Tart\Concerns\HasLineBuilding;
+use IGC\Tart\Contracts\StyledCommandInterface;
+use IGC\Tart\Contracts\ThemeInterface;
+use IGC\Tart\Support\AsciiArt;
+use IGC\Tart\Themes\DefaultTheme;
 use Symfony\Component\Console\Formatter\OutputFormatter;
 use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 use Symfony\Component\Console\Input\InputInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Profss\Tart\Contracts;
+namespace IGC\Tart\Contracts;
 
 interface StyledCommandInterface
 {

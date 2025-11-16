@@ -55,7 +55,7 @@ composer require igclabs/tart
 
 namespace App\Console\Commands;
 
-use Profss\Tart\Laravel\StyledCommand;
+use IGC\Tart\Laravel\StyledCommand;
 
 class DeployCommand extends StyledCommand
 {
@@ -175,7 +175,7 @@ $this->hr();        // Horizontal rule
 ## 🎨 Themes
 
 ```php
-use Profss\Tart\Themes\{DefaultTheme, SuccessTheme, ErrorTheme, Theme};
+use IGC\Tart\Themes\{DefaultTheme, SuccessTheme, ErrorTheme, Theme};
 
 // Use built-in theme
 $this->setTheme(new SuccessTheme());

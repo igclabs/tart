@@ -271,7 +271,7 @@ $this->displayTextLogo('WIDE LOGO', 'box', [
 For more control, use the `AsciiArt` class directly:
 
 ```php
-use Profss\Tart\Support\AsciiArt;
+use IGC\Tart\Support\AsciiArt;
 
 // Create logo lines
 $lines = AsciiArt::createTextLogo('MY APP', [
@@ -380,7 +380,7 @@ $this->displayTextLogo('TEXT', 'standard', [
 
 namespace App\Console\Commands;
 
-use Profss\Tart\Laravel\StyledCommand;
+use IGC\Tart\Laravel\StyledCommand;
 
 class MyBrandedCommand extends StyledCommand
 {

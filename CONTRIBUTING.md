@@ -68,7 +68,7 @@ composer test-coverage
 ```php
 <?php
 
-namespace Profss\Tart\Support;
+namespace IGC\Tart\Support;
 
 class Example
 {

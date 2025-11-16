@@ -1,9 +1,9 @@
 <?php
 
-namespace Profss\Tart\Tests\Unit;
+namespace IGC\Tart\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Profss\Tart\Support\LineFormatter;
+use IGC\Tart\Support\LineFormatter;
 
 class LineFormatterTest extends TestCase
 {

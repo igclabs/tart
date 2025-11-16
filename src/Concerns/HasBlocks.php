@@ -1,8 +1,8 @@
 <?php
 
-namespace Profss\Tart\Concerns;
+namespace IGC\Tart\Concerns;
 
-use Profss\Tart\Support\LineFormatter;
+use IGC\Tart\Support\LineFormatter;
 
 trait HasBlocks
 {

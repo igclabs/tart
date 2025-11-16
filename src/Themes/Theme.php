@@ -1,8 +1,8 @@
 <?php
 
-namespace Profss\Tart\Themes;
+namespace IGC\Tart\Themes;
 
-use Profss\Tart\Contracts\ThemeInterface;
+use IGC\Tart\Contracts\ThemeInterface;
 
 class Theme implements ThemeInterface
 {

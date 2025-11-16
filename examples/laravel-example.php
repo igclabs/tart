@@ -8,8 +8,8 @@
 
 namespace App\Console\Commands;
 
-use Profss\Tart\Laravel\StyledCommand;
-use Profss\Tart\Themes\SuccessTheme;
+use IGC\Tart\Laravel\StyledCommand;
+use IGC\Tart\Themes\SuccessTheme;
 
 class ExampleCommand extends StyledCommand
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Profss\Tart\Tests\Integration;
+namespace IGC\Tart\Tests\Integration;
 
 use Orchestra\Testbench\TestCase;
-use Profss\Tart\Laravel\StyledCommand;
-use Profss\Tart\Themes\SuccessTheme;
+use IGC\Tart\Laravel\StyledCommand;
+use IGC\Tart\Themes\SuccessTheme;
 
 class StyledCommandTest extends TestCase
 {

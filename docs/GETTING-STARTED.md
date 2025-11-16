@@ -25,7 +25,7 @@ That's it! The package is ready to use.
 
 namespace App\Console\Commands;
 
-use Profss\Tart\Laravel\StyledCommand;
+use IGC\Tart\Laravel\StyledCommand;
 
 class MyCommand extends StyledCommand
 {
@@ -103,7 +103,7 @@ $this->bad('✗ API: Timeout');
 ### Themed Operations
 
 ```php
-use Profss\Tart\Themes\SuccessTheme;
+use IGC\Tart\Themes\SuccessTheme;
 
 $this->setTheme(new SuccessTheme());
 $this->header('Deployment');

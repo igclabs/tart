@@ -1,6 +1,6 @@
 <?php
 
-namespace Profss\Tart\Concerns;
+namespace IGC\Tart\Concerns;
 
 /**
  * Trait for interactive command features.

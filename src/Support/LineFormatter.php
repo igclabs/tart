@@ -1,6 +1,6 @@
 <?php
 
-namespace Profss\Tart\Support;
+namespace IGC\Tart\Support;
 
 class LineFormatter
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Profss\Tart\Themes;
+namespace IGC\Tart\Themes;
 
 class ErrorTheme extends Theme
 {

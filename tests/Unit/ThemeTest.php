@@ -1,12 +1,12 @@
 <?php
 
-namespace Profss\Tart\Tests\Unit;
+namespace IGC\Tart\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Profss\Tart\Themes\Theme;
-use Profss\Tart\Themes\DefaultTheme;
-use Profss\Tart\Themes\SuccessTheme;
-use Profss\Tart\Themes\ErrorTheme;
+use IGC\Tart\Themes\Theme;
+use IGC\Tart\Themes\DefaultTheme;
+use IGC\Tart\Themes\SuccessTheme;
+use IGC\Tart\Themes\ErrorTheme;
 
 class ThemeTest extends TestCase
 {

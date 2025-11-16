@@ -6,7 +6,7 @@ All notable changes to TART (Terminal Art for Artisan) will be documented in thi
 
 ### Rebranding
 - **Package renamed to TART** (Terminal Art for Artisan)
-  - Namespace changed from `Profss\ConsoleArtist` to `Profss\Tart`
+  - Namespace changed from `IGC\ConsoleArtist` to `IGC\Tart`
   - Command renamed from `console-artist:demo` to `tart:demo`
   - All references updated throughout codebase
   - More memorable, catchy name
