@@ -1,7 +1,7 @@
 # TART 🎨
 
 <p align="center">
-  <img src="https://www.intelligentgraphicandcode.com/storage/img/igc-tart-logo_1763304214.png" alt="TART Logo" width="400">
+  <img src="https://www.intelligentgraphicandcode.com/storage/img/igc-tart-logo_1763304567.png" alt="TART Logo" width="400">
 </p>
 
 <p align="center">
