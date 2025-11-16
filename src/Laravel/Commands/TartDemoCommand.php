@@ -31,12 +31,12 @@ class TartDemoCommand extends StyledCommand
         $this->logoBlock();
         $this->header('TART Demo Guide');
 
-        $this->say('Welcome! This self-documenting tour walks through the typography, spacing, and theming helpers that ship with TART.');
-        $this->say('Every line you see is produced by a helper method so you can copy/paste the snippets straight into your own commands.');
+        $this->narrate('Welcome! This self-documenting tour walks through the typography, spacing, and theming helpers that ship with TART.');
+        $this->narrate('Every line you see is produced by a helper method so you can copy/paste the snippets straight into your own commands.');
         $this->br();
 
         $this->title('Typography Basics');
-        $this->say('Use say() for neutral narrative text like this paragraph.');
+        $this->narrate('Use say() for neutral narrative text like this paragraph.');
         $this->good('good() highlights wins or completed work.');
         $this->state('state() is perfect for heads-up display style updates.');
         $this->bad('bad() keeps failures loud and impossible to miss.');
@@ -44,15 +44,15 @@ class TartDemoCommand extends StyledCommand
         $this->br();
 
         $this->title('Layout & Rhythm');
-        $this->say('br() inserts blank lines; br(2) gives extra breathing room, while hr() draws a clean divider:');
+        $this->narrate('br() inserts blank lines. Call br(2) for extra breathing room, and hr() when you want a clean divider:');
         $this->br();
         $this->hr();
         $this->br();
-        $this->say('Use these helpers whenever you need to give the eye a break.');
+        $this->narrate('Use these helpers whenever you need to give the eye a break.');
         $this->br(2);
 
         $this->title('Line Building & Columns');
-        $this->say('openLine(), appendLine(), and closeLine() let you narrate progress inline:');
+        $this->narrate('openLine(), appendLine(), and closeLine() let you narrate progress inline:');
         $this->openLine('Download Assets');
         $this->appendLine(' ...', 'yellow');
         $this->appendLine(' Done', 'green');
@@ -64,7 +64,7 @@ class TartDemoCommand extends StyledCommand
         $this->closeLine();
         $this->br();
 
-        $this->say('Need structured columns? addColumn() pads everything for you:');
+        $this->narrate('Need structured columns? addColumn() pads everything for you:');
         $this->openLine('Module');
         $this->addColumn('Status', 15, 'yellow');
         $this->addColumn('Duration', 15, 'cyan');
@@ -80,12 +80,12 @@ class TartDemoCommand extends StyledCommand
         $this->br();
 
         $this->title('Path Highlighting');
-        $this->say('PathHighlight() keeps file references readable even inside dense logs:');
+        $this->narrate('PathHighlight() keeps file references readable even inside dense logs:');
         $this->say($this->pathHighlight('/var/www/html/app/Console/Commands/TartDemoCommand.php'));
         $this->br();
 
         $this->title('Theme Switching & Logos');
-        $this->say('Calling setTheme() lets different moments in your workflow adopt their own palettes.');
+        $this->narrate('Calling setTheme() lets different moments in your workflow adopt their own palettes.');
         $this->setTheme(new SuccessTheme());
         $this->success('SuccessTheme engaged — perfect for celebratory summaries.');
         $this->displayTextLogo('SUCCESS MODE', 'box', [
@@ -104,12 +104,23 @@ class TartDemoCommand extends StyledCommand
         $this->failure('failure() keeps post-mortems readable.');
         $this->br();
 
-        $this->say('Each of these sections came straight from the methods documented in docs/guides/QUICK-REFERENCE.md — run `php artisan vendor:publish --tag=tart-config` to tune the theme defaults for your team.');
+        $this->narrate('Each of these sections came straight from the methods documented in docs/guides/QUICK-REFERENCE.md — run `php artisan vendor:publish --tag=tart-config` to tune the theme defaults for your team.');
 
         $this->br();
         $this->footer('Demo', 'Walkthrough complete');
 
         return self::SUCCESS;
+    }
+
+    /**
+     * Wrap long paragraphs to the current theme width.
+     */
+    protected function narrate(string $text): void
+    {
+        $width = max(10, $this->getTheme()->getMaxLineWidth() - 4);
+        foreach (explode("\n", wordwrap($text, $width)) as $line) {
+            $this->say($line);
+        }
     }
 }
 
