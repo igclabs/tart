@@ -1,5 +1,7 @@
 # TART - Quick Reference Card
 
+> Install with `composer require igclabs/tart` and extend either `IGC\Tart\Laravel\StyledCommand` or `IGC\Tart\Symfony\StyledCommand`.
+
 ## 📝 Basic Output
 
 ```php

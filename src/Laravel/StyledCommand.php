@@ -3,16 +3,15 @@
 namespace IGC\Tart\Laravel;
 
 use Illuminate\Console\Command;
+use IGC\Tart\Concerns\ConfiguresFormatter;
 use IGC\Tart\Concerns\HasBlocks;
 use IGC\Tart\Concerns\HasColoredOutput;
 use IGC\Tart\Concerns\HasInteractivity;
 use IGC\Tart\Concerns\HasLineBuilding;
+use IGC\Tart\Concerns\InteractsWithStyling;
 use IGC\Tart\Contracts\StyledCommandInterface;
 use IGC\Tart\Contracts\ThemeInterface;
 use IGC\Tart\Support\AsciiArt;
-use IGC\Tart\Themes\DefaultTheme;
-use Symfony\Component\Console\Formatter\OutputFormatter;
-use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -22,13 +21,13 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     use HasBlocks;
     use HasLineBuilding;
     use HasInteractivity;
-
-    protected ThemeInterface $theme;
+    use InteractsWithStyling;
+    use ConfiguresFormatter;
 
     public function __construct()
     {
         parent::__construct();
-        $this->theme = new DefaultTheme();
+        $this->bootStyling();
     }
 
     /**
@@ -77,17 +76,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      */
     public function run(InputInterface $input, OutputInterface $output): int
     {
-        // Set extra colors
-        $formatter = new OutputFormatter($output->isDecorated());
-        $formatter->setStyle('red', new OutputFormatterStyle('red', 'black'));
-        $formatter->setStyle('green', new OutputFormatterStyle('green', 'black'));
-        $formatter->setStyle('yellow', new OutputFormatterStyle('yellow', 'black'));
-        $formatter->setStyle('blue', new OutputFormatterStyle('blue', 'black'));
-        $formatter->setStyle('magenta', new OutputFormatterStyle('magenta', 'black'));
-        $formatter->setStyle('cyan', new OutputFormatterStyle('cyan', 'black'));
-        $formatter->setStyle('yellow-blue', new OutputFormatterStyle('yellow', 'blue'));
-        $formatter->setStyle('igc', new OutputFormatterStyle('white', 'black'));
-        $output->setFormatter($formatter);
+        $this->configureOutputFormatter($output);
 
         return parent::run($input, $output);
     }
@@ -206,8 +195,8 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      */
     public function displayTextLogo(string $text, string $style = 'standard', array $options = []): void
     {
+        $options = $this->logoOptions($options);
         $options['style'] = $style;
-        $options['width'] = $options['width'] ?? $this->theme->getMaxLineWidth();
         
         $lines = AsciiArt::createTextLogo($text, $options);
         
@@ -224,7 +213,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      */
     public function displayAsciiLogo(string $asciiArt, array $options = []): void
     {
-        $options['width'] = $options['width'] ?? $this->theme->getMaxLineWidth();
+        $options = $this->logoOptions($options);
         
         $lines = AsciiArt::createMultiLineLogo($asciiArt, $options);
         
@@ -241,7 +230,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      */
     public function displayCustomLogo(array $lines, array $options = []): void
     {
-        $options['width'] = $options['width'] ?? $this->theme->getMaxLineWidth();
+        $options = $this->logoOptions($options);
         
         $formattedLines = AsciiArt::createLogo($lines, $options);
         
@@ -249,6 +238,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
             $this->line($line);
         }
     }
+
 }
 
 

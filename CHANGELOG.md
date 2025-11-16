@@ -4,12 +4,34 @@ All notable changes to TART (Terminal Art for Artisan) will be documented in thi
 
 ## [1.1.0] - 2025-11-16
 
-### Rebranding
-- **Package renamed to TART** (Terminal Art for Artisan)
+### Added
+- **Automatic Logo Creation** - New `AsciiArt` support class enables:
+  - `displayTextLogo()` for decorated text logos
+  - `displayAsciiLogo()` for multi-line ASCII art
+  - `displayCustomLogo()` for fully custom layouts
+  - Standard, box, and banner presets with configurable colors, width, and padding
+- Comprehensive logo creation examples and updated documentation (`LOGO-CREATION.md`)
+
+### Changed
+- **Rebranding** to TART (Terminal Art for Artisan)
   - Namespace changed from `IGC\ConsoleArtist` to `IGC\Tart`
-  - Command renamed from `console-artist:demo` to `tart:demo`
-  - All references updated throughout codebase
-  - More memorable, catchy name
+  - Base demo command renamed from `console-artist:demo` to `tart:demo`
+  - Repository, docs, and assets updated to the new name
+- `StyledCommand` enhanced with logo display helpers backed by the new `AsciiArt` class
+
+## [1.0.1] - 2025-11-16
+
+### Fixed
+- **Emoji Alignment Issue** - Fixed padding and alignment for multi-byte characters (emojis)
+  - Added `LineFormatter::visualLength()` method for proper UTF-8 character counting
+  - Updated `pad()`, `padding()`, and `center()` to use `mb_strlen()` instead of `strlen()`
+  - Changed `substr()` to `mb_substr()` for multi-byte safety
+  - Lines with emojis (✓, ✗, ⚠, ℹ, 🎉) now align correctly
+  - Added comprehensive tests for emoji handling
+
+### Changed
+- Updated `BaseCommand::entityBlock()` to use `LineFormatter::visualLength()`
+- Added 5 new unit tests for multi-byte character support
 
 ## [1.0.0] - 2025-11-16
 
@@ -66,24 +88,6 @@ All notable changes to TART (Terminal Art for Artisan) will be documented in thi
 - Integration tests for StyledCommand
 - Example command included
 
-## [1.1.0] - 2025-11-16
-
-### Added
-- **Automatic Logo Creation** - New `AsciiArt` support class for creating branded logos
-  - `displayTextLogo()` - Create text logos with automatic decoration
-  - `displayAsciiLogo()` - Display multi-line ASCII art with decoration
-  - `displayCustomLogo()` - Full control over logo creation
-  - Three built-in styles: standard, box, and banner
-  - Automatic colorful header/footer decoration blocks
-  - Customizable colors, width, and padding
-  - See [LOGO-CREATION.md](LOGO-CREATION.md) for full documentation
-- Added `logo:demo` command to demonstrate logo creation features
-- Added comprehensive logo creation examples
-
-### Changed
-- Enhanced `StyledCommand` with new logo display methods
-- Added `AsciiArt` class to `Support` namespace
-
 ## [1.0.1] - 2025-11-16
 
 ### Fixed
@@ -99,6 +103,14 @@ All notable changes to TART (Terminal Art for Artisan) will be documented in thi
 - Added 5 new unit tests for multi-byte character support
 
 ## [Unreleased]
+
+### Added
+- Laravel `TartServiceProvider` that auto-registers the bundled `tart:demo` command for immediate previews
+- Publishable `config/tart.php` for customizing the default theme, logo palette, and auto-answer behavior
+- `IGC\Tart\Symfony\StyledCommand` for framework-agnostic Console apps
+
+### Changed
+- Logo creation helpers now honor header/footer/padding/color options (with dedicated unit tests)
 
 ### Planned
 - Symfony Console adapter (for non-Laravel projects)

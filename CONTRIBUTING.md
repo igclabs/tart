@@ -41,7 +41,7 @@ Be respectful, inclusive, and professional. We're building tools to make develop
 
 ```bash
 # Clone your fork
-git clone https://github.com/profss/tart.git
+git clone https://github.com/igclabs/tart.git
 cd tart
 
 # Install dependencies
@@ -176,7 +176,7 @@ Before submitting:
 - **Questions:** Open a discussion
 - **Bugs:** Open an issue
 - **Features:** Open an issue for discussion first
-- **Security:** Email dev@profss.com (do not open public issues)
+- **Security:** Email security@igcenterprises.com (do not open public issues)
 
 ## Recognition
 

@@ -5,6 +5,7 @@ namespace IGC\Tart\Tests\Integration;
 use Orchestra\Testbench\TestCase;
 use IGC\Tart\Laravel\StyledCommand;
 use IGC\Tart\Themes\SuccessTheme;
+use IGC\Tart\Themes\Theme;
 
 class StyledCommandTest extends TestCase
 {
@@ -74,6 +75,49 @@ class StyledCommandTest extends TestCase
         };
 
         $this->assertInstanceOf(StyledCommand::class, $command);
+    }
+
+    public function test_theme_can_be_configured_via_config_file(): void
+    {
+        config()->set('tart.theme', [
+            'class' => Theme::class,
+            'color' => 'purple',
+            'text_color' => 'white',
+            'highlight_color' => 'yellow',
+            'max_line_width' => 100,
+            'colors' => ['purple', 'white'],
+        ]);
+
+        $command = new class extends StyledCommand {
+            protected $signature = 'test:command';
+
+            public function handle()
+            {
+                return 0;
+            }
+        };
+
+        $theme = $command->getTheme();
+
+        $this->assertEquals('purple', $theme->getColor());
+        $this->assertEquals('white', $theme->getTextColor());
+        $this->assertEquals(100, $theme->getMaxLineWidth());
+    }
+
+    public function test_auto_answer_default_can_be_configured(): void
+    {
+        config()->set('tart.auto_answer', true);
+
+        $command = new class extends StyledCommand {
+            protected $signature = 'test:command';
+
+            public function handle()
+            {
+                return 0;
+            }
+        };
+
+        $this->assertTrue($command->autoAnswer);
     }
 }
 

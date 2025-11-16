@@ -66,20 +66,24 @@ class LineFormatter
      */
     public static function highlightPath(string $path): string
     {
-        $parts = explode('/', $path);
-        $total = count($parts);
-        
-        for ($i = 0; $i < $total; ++$i) {
-            if (($i + 1) === $total) {
-                $parts[$i] = "<fg=white>{$parts[$i]}</fg=white>";
-            } else {
-                $parts[$i] = "<fg=cyan>{$parts[$i]}</fg=cyan>";
+        $tokens = preg_split('/(\/|\\\\)/', $path, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+        $segments = array_values(array_filter($tokens, fn ($token) => $token !== '/' && $token !== '\\'));
+        $totalSegments = count($segments);
+        $segmentIndex = 0;
+        $output = '';
+
+        foreach ($tokens as $token) {
+            if ($token === '/' || $token === '\\') {
+                $output .= "<fg=yellow>{$token}</fg=yellow>";
+                continue;
             }
+
+            $segmentIndex++;
+            $color = ($segmentIndex === $totalSegments) ? 'white' : 'cyan';
+            $output .= "<fg={$color}>{$token}</fg={$color}>";
         }
-        
-        $sep = '<fg=yellow>/</fg=yellow>';
-        
-        return implode($sep, $parts);
+
+        return $output;
     }
 }
 

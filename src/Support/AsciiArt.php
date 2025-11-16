@@ -114,9 +114,16 @@ class AsciiArt
             'colors' => ['red', 'green', 'yellow', 'cyan', 'white'],
             'text_color' => 'white',
             'width' => 80,
+            'header_lines' => 3,
+            'footer_lines' => 3,
+            'padding_top' => 1,
+            'padding_bottom' => 1,
+            'blocks_per_line' => 40,
         ];
 
+        $rawOptions = $options;
         $config = array_merge($defaults, $options);
+        $config['_overrides'] = $rawOptions;
 
         switch ($config['style']) {
             case 'box':
@@ -136,10 +143,7 @@ class AsciiArt
         $textLine = "<options=bold><fg={$config['text_color']}>{$text}</fg={$config['text_color']}></options=bold>";
         $centered = LineFormatter::center($textLine, $config['width']);
 
-        return self::createLogo([$centered], [
-            'colors' => $config['colors'],
-            'width' => $config['width'],
-        ]);
+        return self::createLogo([$centered], self::logoOptionSlice($config));
     }
 
     /**
@@ -158,10 +162,7 @@ class AsciiArt
             LineFormatter::center($topLine, $config['width']),
             LineFormatter::center($textLine, $config['width']),
             LineFormatter::center($bottomLine, $config['width']),
-        ], [
-            'colors' => $config['colors'],
-            'width' => $config['width'],
-        ]);
+        ], self::logoOptionSlice($config));
     }
 
     /**
@@ -173,16 +174,22 @@ class AsciiArt
         $textLine = "<options=bold><fg={$config['text_color']}>{$text}</fg={$config['text_color']}></options=bold>";
         $centered = LineFormatter::center($textLine, $config['width']);
 
+        $overrides = $config['_overrides'] ?? [];
+        $logoConfig = $config;
+
+        if (!array_key_exists('padding_top', $overrides)) {
+            $logoConfig['padding_top'] = 0;
+        }
+
+        if (!array_key_exists('padding_bottom', $overrides)) {
+            $logoConfig['padding_bottom'] = 0;
+        }
+
         return self::createLogo([
             $separator,
             $centered,
             $separator,
-        ], [
-            'colors' => $config['colors'],
-            'width' => $config['width'],
-            'padding_top' => 0,
-            'padding_bottom' => 0,
-        ]);
+        ], self::logoOptionSlice($logoConfig));
     }
 
     /**
@@ -199,6 +206,11 @@ class AsciiArt
         $defaults = [
             'colors' => ['red', 'green', 'yellow', 'cyan', 'white'],
             'width' => 80,
+            'header_lines' => 3,
+            'footer_lines' => 3,
+            'padding_top' => 1,
+            'padding_bottom' => 1,
+            'blocks_per_line' => 40,
         ];
 
         $config = array_merge($defaults, $options);
@@ -208,10 +220,7 @@ class AsciiArt
             return self::padLine($line, $config['width']);
         }, $lines);
 
-        return self::createLogo($processedLines, [
-            'colors' => $config['colors'],
-            'width' => $config['width'],
-        ]);
+        return self::createLogo($processedLines, self::logoOptionSlice($config));
     }
 
     /**
@@ -271,6 +280,22 @@ class AsciiArt
         }
 
         return $output;
+    }
+
+    /**
+     * Extract logo options from config array.
+     */
+    protected static function logoOptionSlice(array $config): array
+    {
+        return [
+            'colors' => $config['colors'],
+            'width' => $config['width'],
+            'header_lines' => $config['header_lines'] ?? 0,
+            'footer_lines' => $config['footer_lines'] ?? 0,
+            'padding_top' => $config['padding_top'] ?? 0,
+            'padding_bottom' => $config['padding_bottom'] ?? 0,
+            'blocks_per_line' => $config['blocks_per_line'] ?? 40,
+        ];
     }
 }
 

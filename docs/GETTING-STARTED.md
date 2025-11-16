@@ -9,7 +9,66 @@
 ### Laravel Projects
 
 ```bash
-composer require profss/tart
+composer require igclabs/tart
+```
+
+### Verify Installation
+
+```bash
+composer show igclabs/tart
+```
+
+You should see output that begins with `name     : igclabs/tart`, confirming Composer installed the correct package.
+
+### Laravel Auto-Discovery
+
+Laravel 9+ automatically registers `IGC\Tart\Laravel\TartServiceProvider`, which exposes the built-in demo command:
+
+```bash
+php artisan tart:demo
+```
+
+Prefer manual control? Disable auto-discovery in Composer and add the provider to `config/app.php`.
+
+### Configuration
+
+Publish the configuration to customize the default theme, logo palette, and auto-answer behavior:
+
+```bash
+php artisan vendor:publish --tag=tart-config
+```
+
+### Symfony Console Projects
+
+Use the `IGC\Tart\Symfony\StyledCommand` base class when building commands without Laravel:
+
+```php
+use IGC\Tart\Symfony\StyledCommand;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class StatusCommand extends StyledCommand
+{
+    protected static $defaultName = 'app:status';
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $this->header('Status');
+        $this->say('All systems nominal');
+
+        return Command::SUCCESS;
+    }
+}
+```
+
+Need to override defaults? Pass a config array into the constructor:
+
+```php
+new StatusCommand('app:status', [
+    'theme' => ['color' => 'green'],
+    'auto_answer' => true,
+]);
 ```
 
 That's it! The package is ready to use.

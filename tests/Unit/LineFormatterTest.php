@@ -48,6 +48,11 @@ class LineFormatterTest extends TestCase
         
         $this->assertStringContainsString('app.php', $result);
         $this->assertStringContainsString('<fg=', $result);
+
+        $windowsPath = 'C:\\Users\\demo\\app.php';
+        $windowsResult = LineFormatter::highlightPath($windowsPath);
+        $this->assertStringContainsString('<fg=yellow>\\</fg=yellow>', $windowsResult);
+        $this->assertStringContainsString('demo', $windowsResult);
     }
 
     public function test_visual_length_handles_emojis(): void
@@ -83,8 +88,9 @@ class LineFormatterTest extends TestCase
         $line = '✓ Success';
         $result = LineFormatter::padding($line, 15);
         
-        // Should pad to 15 visual characters
-        $this->assertEquals(5, strlen($result)); // 5 spaces
+        // Should pad to the remaining visual characters
+        $expectedPadding = 15 - LineFormatter::visualLength($line);
+        $this->assertEquals($expectedPadding, strlen($result));
         $this->assertEquals(15, LineFormatter::visualLength($line . $result));
     }
 

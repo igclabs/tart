@@ -1,5 +1,7 @@
 # Automatic Logo Creation
 
+> Part of the `igclabs/tart` package (`composer require igclabs/tart`)
+
 TART includes a powerful system for creating beautiful ASCII art logos with automatic header and footer decorations!
 
 ## 🎨 Features

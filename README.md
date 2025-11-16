@@ -56,6 +56,16 @@ $this->success('🎉 Deployment complete!');
 composer require igclabs/tart
 ```
 
+### Verify Installation
+
+After requiring the package, you can confirm that Composer resolved the correct package by inspecting it:
+
+```bash
+composer show igclabs/tart
+# name     : igclabs/tart
+# versions : * 1.1.0
+```
+
 ## Quick Start
 
 ### Laravel
@@ -103,6 +113,85 @@ class DeployCommand extends StyledCommand
 ### Example Usage
 
 See the complete example in [examples/laravel-example.php](examples/laravel-example.php)
+
+### Symfony Console
+
+```php
+<?php
+
+namespace App\Command;
+
+use IGC\Tart\Symfony\StyledCommand;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class DeployCommand extends StyledCommand
+{
+    protected static $defaultName = 'app:deploy';
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $this->header('Deployment (Symfony)');
+        $this->say('Shipping bits via Symfony Console!');
+        $this->success('Done!');
+
+        return Command::SUCCESS;
+    }
+}
+```
+
+Need custom defaults outside Laravel? Pass overrides into the constructor:
+
+```php
+new DeployCommand('app:deploy', [
+    'theme' => [
+        'class' => \IGC\Tart\Themes\Theme::class,
+        'color' => 'purple',
+        'max_line_width' => 100,
+    ],
+]);
+```
+
+### Laravel Auto-Discovery & Demo Command
+
+Laravel 9+ automatically discovers the `IGC\Tart\Laravel\TartServiceProvider`, which registers the `tart:demo` Artisan command. After installing the package you can immediately preview the styling toolkit:
+
+```bash
+php artisan tart:demo
+```
+
+Need manual control? Add TART to Composer's `dont-discover` list and register the provider in `config/app.php`:
+
+```json
+{
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "igclabs/tart"
+            ]
+        }
+    }
+}
+```
+
+```php
+// config/app.php
+'providers' => [
+    // ...
+    IGC\Tart\Laravel\TartServiceProvider::class,
+],
+```
+
+#### Publish Configuration
+
+Publish the default configuration to tweak the base theme, logo colors, or auto-answer behavior:
+
+```bash
+php artisan vendor:publish --tag=tart-config
+```
+
+`config/tart.php` lets you point to a custom `ThemeInterface` implementation or adjust the palette/width used by the bundled `Theme` class.
 
 ## 📖 Core Features
 
@@ -217,9 +306,15 @@ $this->setTheme($theme);
 
 Check out the working examples in the `examples/` directory:
 
-### Quick Demo
+### Built-in Demo Command
 ```bash
-# Basic demo showing common features
+# Auto-registered when the package is installed in Laravel
+php artisan tart:demo
+```
+
+### Quick Demo Source
+```bash
+# Basic demo showing the same features inside your editor
 cat examples/demo-command.php
 ```
 
@@ -236,8 +331,8 @@ cat examples/laravel-example.php
 ```
 
 **Try it yourself:**
-1. Copy any example to your Laravel `app/Console/Commands/` directory
-2. Run `php artisan tart:demo` to see TART in action!
+1. Run `php artisan tart:demo` to see the built-in showcase
+2. Copy any example to your Laravel `app/Console/Commands/` directory when you're ready to customize your own command
 
 ## 💡 Use Cases
 

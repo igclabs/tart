@@ -1,6 +1,6 @@
 # TART Examples
 
-This directory contains working examples demonstrating TART's features and capabilities.
+This directory contains working examples demonstrating TART's features and capabilities. Make sure the package is installed via `composer require igclabs/tart` before copying any command into your application.
 
 ## Available Examples
 
@@ -94,19 +94,20 @@ php artisan tart:demo-full --theme=error
 
 ### In Laravel
 
-1. **Copy to your project:**
-```bash
-cp examples/demo-command.php app/Console/Commands/TartDemoCommand.php
-```
-
-2. **Run the command:**
+1. **Run the built-in command (already registered via the service provider):**
 ```bash
 php artisan tart:demo
+```
+
+2. **Copy an example when you want to customize it:**
+```bash
+cp examples/demo-command.php app/Console/Commands/TartDemoCommand.php
 ```
 
 ### Standalone (Outside Laravel)
 
 See the [GETTING-STARTED.md](../docs/GETTING-STARTED.md) guide for using TART outside of Laravel.
+It includes a Symfony Console example built on `IGC\Tart\Symfony\StyledCommand`.
 
 ---
 

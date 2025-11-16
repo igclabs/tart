@@ -62,6 +62,13 @@
     "scripts": {
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IGC\\Tart\\Laravel\\TartServiceProvider"
+            ]
+        }
     }
 }
 
