@@ -88,11 +88,14 @@ class TartDemoCommand extends StyledCommand
         $this->narrate('Calling setTheme() lets different moments in your workflow adopt their own palettes.');
         $this->setTheme(new SuccessTheme());
         $this->success('SuccessTheme engaged — perfect for celebratory summaries.');
+        $logoWidth = $this->logoWidth();
         $this->displayTextLogo('SUCCESS MODE', 'box', [
             'text_color' => 'green',
+            'width' => $logoWidth,
         ]);
         $this->displayTextLogo('TYPOGRAPHY MATTERS', 'banner', [
             'text_color' => 'cyan',
+            'width' => $logoWidth,
         ]);
         $this->setTheme($originalTheme);
         $this->br();
@@ -121,6 +124,14 @@ class TartDemoCommand extends StyledCommand
         foreach (explode("\n", wordwrap($text, $width)) as $line) {
             $this->say($line);
         }
+    }
+
+    /**
+     * Calculate the inner logo width (excluding outer framing).
+     */
+    protected function logoWidth(): int
+    {
+        return max(24, $this->getTheme()->getMaxLineWidth() + 8);
     }
 }
 
