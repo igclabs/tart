@@ -1,6 +1,10 @@
 # TART 🎨
 
 <p align="center">
+  <img src="https://www.intelligentgraphicandcode.com/storage/img/igc-tart-logo_1763304214.png" alt="TART Logo" width="400">
+</p>
+
+<p align="center">
   <strong>Terminal Art for Artisan</strong><br>
   <em>A beautiful, expressive terminal UI toolkit for PHP console applications</em>
 </p>
@@ -303,7 +307,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🙏 Credits
 
-Developed by the Profss team. Extracted from internal tooling and open-sourced for the community.
+Developed by the [IGC team](https://www.intelligentgraphicandcode.com/). Extracted from internal tooling and open-sourced for the community.
 
 ## 🔗 Resources
 
