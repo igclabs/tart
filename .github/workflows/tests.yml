@@ -16,10 +16,10 @@ jobs:
     name: PHP ${{ matrix.php }}
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: shivammathur/setup-php@v3
       with:
         php-version: ${{ matrix.php }}
         extensions: mbstring, xml

@@ -1,0 +1,9 @@
+parameters:
+    level: 7
+    paths:
+        - src
+    tmpDir: var/phpstan
+    checkMissingIterableValueType: true
+    checkMissingVarTagTypehint: true
+    treatPhpDocTypesAsCertain: false
+

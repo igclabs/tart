@@ -61,7 +61,8 @@
     "prefer-stable": true,
     "scripts": {
         "test": "phpunit",
-        "test-coverage": "phpunit --coverage-html coverage"
+        "test-coverage": "phpunit --coverage-html coverage",
+        "stan": "phpstan analyse"
     },
     "extra": {
         "laravel": {
