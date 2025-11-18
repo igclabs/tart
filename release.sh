@@ -6,6 +6,7 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_ROOT"
 
 VERSION_FILE="$REPO_ROOT/version.txt"
+README_FILE="$REPO_ROOT/README.md"
 
 if [[ ! -f "$VERSION_FILE" ]]; then
   echo "version.txt not found in $REPO_ROOT" >&2
@@ -24,6 +25,10 @@ PATCH=$((PATCH + 1))
 NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
 
 echo "$NEW_VERSION" > "$VERSION_FILE"
+
+if [[ -f "$README_FILE" ]]; then
+  perl -0pi -e "s/version-${CURRENT_VERSION}/version-${NEW_VERSION}/g; s/# versions : \\* ${CURRENT_VERSION}/# versions : * ${NEW_VERSION}/g" "$README_FILE"
+fi
 
 COMMIT_MESSAGE="${1:-}"
 if [[ -z "$COMMIT_MESSAGE" ]]; then

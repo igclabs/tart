@@ -56,7 +56,7 @@ trait HasBlocks
     public function header(string $reportname): void
     {
         $this->block(
-            strtoupper($reportname . ' Reporting'),
+            strtoupper($reportname),
             $this->theme->getColor(),
             $this->theme->getTextColor(),
             '*',

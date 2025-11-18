@@ -1,18 +1,17 @@
 <?php
 
-/**
- * TART Fluent API Demo
- *
- * This example demonstrates the new fluent APIs introduced in TART.
- * Shows how to use chainable methods for more expressive, Laravel-like syntax.
- */
-
-namespace App\Console\Commands;
+namespace IGC\Tart\Laravel\Commands;
 
 use IGC\Tart\Laravel\StyledCommand;
 use IGC\Tart\Themes\Theme;
-
-class FluentApiDemoCommand extends StyledCommand
+use IGC\Tart\Themes\DefaultTheme;
+/**
+ * TART Fluent API Demo Command
+ *
+ * Demonstrates the new fluent APIs introduced in TART.
+ * Shows how to use chainable methods for more expressive, Laravel-like syntax.
+ */
+class TartFluentDemoCommand extends StyledCommand
 {
     /**
      * The name and signature of the console command.
@@ -33,6 +32,11 @@ class FluentApiDemoCommand extends StyledCommand
      */
     public function handle(): int
     {
+
+        $this->logoBlock();
+        $this->header('Fluent Demo');
+
+
         // === FLUENT THEME CREATION ===
         $this->demoFluentThemes();
 
@@ -54,16 +58,18 @@ class FluentApiDemoCommand extends StyledCommand
      */
     protected function demoFluentThemes(): void
     {
-        $this->header('Fluent Theme Creation');
+        
 
         // Create a custom theme fluently
         $customTheme = Theme::make('magenta')
-            ->withTextColor('white')
-            ->withHighlightColor('cyan')
-            ->withMaxWidth(100)
+            ->withTextColor('bright-white')
+            ->withHighlightColor('bright-red')
+            ->withMaxWidth(90)
             ->withColors(['magenta', 'cyan', 'white', 'yellow']);
 
         $this->setTheme($customTheme);
+
+        $this->header('Fluent Theme Creation');
 
         $this->logo()
             ->text('FLUENT THEMES')
@@ -75,9 +81,11 @@ class FluentApiDemoCommand extends StyledCommand
         $this->notice('Theme properties:');
         $this->say("• Color: {$customTheme->getColor()}");
         $this->say("• Text Color: {$customTheme->getTextColor()}");
-        $this->say("• Max Width: {$customTheme->getMaxWidth()}");
+        $this->say("• Max Width: {$customTheme->getMaxLineWidth()}");
 
-        $this->br();
+        $this->footer('Fluent Theme Creation', 'All themes created!');
+
+        $this->setTheme(new DefaultTheme());        
     }
 
     /**
@@ -146,15 +154,17 @@ ASCII;
 
         // Chain multiple operations together
         $this->logo()
-                ->text('CHAINED OPS')
-                ->boxed()
-                ->color('magenta')
-                ->render()
-            ->br()
-            ->success('First operation completed!')
-            ->notice('Continuing with chained operations...')
-            ->warning('This is a chained warning message')
-            ->good('✓ All chained operations successful!');
+            ->text('CHAINED OPS')
+            ->boxed()
+            ->color('magenta')
+            ->render();
+
+        $this->br();
+
+        $this->success('First operation completed!');
+        $this->notice('Continuing with chained operations...');
+        $this->warning('This is a chained warning message');
+        $this->good('✓ All chained operations successful!');
 
         $this->br();
     }
@@ -163,14 +173,12 @@ ASCII;
      * Demonstrate a complex real-world example.
      */
     protected function demoComplexExample(): void
-    {
-        $this->header('Complex Real-World Example');
+    {     
 
         // Create a deployment theme
-        $deployTheme = Theme::make('blue')
-            ->withTextColor('white')
-            ->withHighlightColor('yellow')
-            ->withMaxWidth(90);
+        $deployTheme = Theme::make('white')
+            ->withTextColor('black')
+            ->withHighlightColor('bright-yellow');        
 
         // Set the theme and show deployment header
         $this->setTheme($deployTheme)
@@ -178,8 +186,11 @@ ASCII;
                 ->text('DEPLOYMENT STARTED')
                 ->banner()
                 ->color('cyan')
-                ->render()
-            ->br();
+                ->render();
+
+        $this->header('Complex Real-World Example');
+
+        $this->br();
 
         // Simulate deployment steps with fluent output
         $steps = [
@@ -221,8 +232,9 @@ ASCII;
             ->text('DEPLOYMENT COMPLETE')
             ->boxed()
             ->color('green')
-            ->render()
-            ->success('🎉 Deployment finished successfully!')
-            ->stat('Total deployment time: 2.3 seconds');
+            ->render();
+        
+        $this->success('Deployment finished successfully!');
+        $this->stat('Total deployment time: 2.3 seconds');
     }
 }

@@ -12,7 +12,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/php-%5E8.0-blue" alt="PHP Version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-  <img src="https://img.shields.io/badge/version-1.1.0-brightgreen" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.1.2-brightgreen" alt="Version">
 </p>
 
 ---
@@ -76,7 +76,7 @@ After requiring the package, you can confirm that Composer resolved the correct 
 ```bash
 composer show igclabs/tart
 # name     : igclabs/tart
-# versions : * 1.1.0
+# versions : * 1.1.2
 ```
 
 ## Quick Start
@@ -162,18 +162,32 @@ Need custom defaults outside Laravel? Pass overrides into the constructor:
 new DeployCommand('app:deploy', [
     'theme' => [
         'class' => \IGC\Tart\Themes\Theme::class,
-        'color' => 'purple',
+        'color' => 'magenta',
         'max_line_width' => 100,
     ],
 ]);
 ```
 
-### Laravel Auto-Discovery & Demo Command
+### Laravel Auto-Discovery & Demo Commands
 
-Laravel 9+ automatically discovers the `IGC\Tart\Laravel\TartServiceProvider`, which registers the `tart:demo` Artisan command. After installing the package you can immediately preview the styling toolkit:
+Laravel 9+ automatically discovers the `IGC\Tart\Laravel\TartServiceProvider`, which registers several Artisan demo commands. After installing the package you can immediately preview different aspects of the styling toolkit:
+
+#### Available Demo Commands
 
 ```bash
+# Quick guide to basic features (recommended first)
 php artisan tart:demo
+
+# One-line test of all features
+php artisan tart:test
+
+# Comprehensive showcase of ALL features
+php artisan tart:demo-full
+php artisan tart:demo-full --theme=success
+php artisan tart:demo-full --theme=error
+
+# Fluent APIs showcase (new in v1.2!)
+php artisan tart:fluent-demo
 ```
 
 Need manual control? Add TART to Composer's `dont-discover` list and register the provider in `config/app.php`:
@@ -304,7 +318,7 @@ $this->hr();        // Horizontal rule
 use IGC\Tart\Themes\{DefaultTheme, SuccessTheme, ErrorTheme, Theme};
 
 // Fluent theme creation (recommended)
-$theme = Theme::make('purple')
+$theme = Theme::make('magenta')
     ->withTextColor('white')
     ->withHighlightColor('yellow')
     ->withMaxWidth(80);
@@ -318,7 +332,7 @@ $this->header('Success Operations');
 
 // Traditional theme creation (still supported)
 $theme = new Theme(
-    color: 'purple',
+    color: 'magenta',
     textColor: 'white',
     highlightColor: 'yellow',
     maxLineWidth: 80

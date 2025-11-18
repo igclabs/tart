@@ -59,7 +59,7 @@ $this->setTheme(new SuccessTheme());
 
 // Create custom theme
 $theme = new Theme(
-    color: 'purple',
+    color: 'magenta',
     textColor: 'white',
     highlightColor: 'yellow',
     maxLineWidth: 80

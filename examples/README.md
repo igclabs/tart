@@ -113,9 +113,19 @@ php artisan tart:fluent-demo
 
 ### In Laravel
 
-1. **Run the built-in command (already registered via the service provider):**
+1. **Run the built-in demo commands (all registered via the service provider):**
 ```bash
+# Basic demo (recommended first)
 php artisan tart:demo
+
+# One-line test
+php artisan tart:test
+
+# Full comprehensive demo
+php artisan tart:demo-full
+
+# Fluent APIs demo (new!)
+php artisan tart:fluent-demo
 ```
 
 2. **Copy an example when you want to customize it:**

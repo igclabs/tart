@@ -12,9 +12,9 @@ class ThemeTest extends TestCase
 {
     public function test_theme_returns_correct_values(): void
     {
-        $theme = new Theme('purple', 'white', 'yellow', 80);
-        
-        $this->assertEquals('purple', $theme->getColor());
+        $theme = new Theme('magenta', 'white', 'yellow', 80);
+
+        $this->assertEquals('magenta', $theme->getColor());
         $this->assertEquals('white', $theme->getTextColor());
         $this->assertEquals('yellow', $theme->getHighlightColor());
         $this->assertEquals(80, $theme->getMaxLineWidth());

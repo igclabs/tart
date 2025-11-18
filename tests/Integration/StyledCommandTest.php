@@ -81,11 +81,11 @@ class StyledCommandTest extends TestCase
     {
         config()->set('tart.theme', [
             'class' => Theme::class,
-            'color' => 'purple',
+            'color' => 'magenta',
             'text_color' => 'white',
             'highlight_color' => 'yellow',
             'max_line_width' => 100,
-            'colors' => ['purple', 'white'],
+            'colors' => ['magenta', 'white'],
         ]);
 
         $command = new class extends StyledCommand {
@@ -99,7 +99,7 @@ class StyledCommandTest extends TestCase
 
         $theme = $command->getTheme();
 
-        $this->assertEquals('purple', $theme->getColor());
+        $this->assertEquals('magenta', $theme->getColor());
         $this->assertEquals('white', $theme->getTextColor());
         $this->assertEquals(100, $theme->getMaxLineWidth());
     }
