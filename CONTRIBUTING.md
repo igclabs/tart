@@ -176,7 +176,7 @@ Before submitting:
 - **Questions:** Open a discussion
 - **Bugs:** Open an issue
 - **Features:** Open an issue for discussion first
-- **Security:** Email security@igcenterprises.com (do not open public issues)
+- **Security:** Email techsupport@igcenterprises.com (do not open public issues)
 
 ## Recognition
 

@@ -50,5 +50,58 @@ class Theme implements ThemeInterface
     {
         return $this->colors;
     }
+
+    /**
+     * Set the primary color and return self for method chaining.
+     */
+    public function withColor(string $color): self
+    {
+        $this->color = $color;
+        return $this;
+    }
+
+    /**
+     * Set the text color and return self for method chaining.
+     */
+    public function withTextColor(string $textColor): self
+    {
+        $this->textColor = $textColor;
+        return $this;
+    }
+
+    /**
+     * Set the highlight color and return self for method chaining.
+     */
+    public function withHighlightColor(string $highlightColor): self
+    {
+        $this->highlightColor = $highlightColor;
+        return $this;
+    }
+
+    /**
+     * Set the maximum line width and return self for method chaining.
+     */
+    public function withMaxWidth(int $maxLineWidth): self
+    {
+        $this->maxLineWidth = $maxLineWidth;
+        return $this;
+    }
+
+    /**
+     * Set the color palette and return self for method chaining.
+     */
+    public function withColors(array $colors): self
+    {
+        $this->colors = $colors;
+        return $this;
+    }
+
+    /**
+     * Create a new theme instance with the specified color.
+     */
+    public static function make(string $color = 'blue'): self
+    {
+        return new static(color: $color);
+    }
 }
 

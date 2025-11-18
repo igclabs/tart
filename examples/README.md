@@ -90,6 +90,25 @@ php artisan tart:demo-full --theme=error
 
 ---
 
+### 4. fluent-api-demo.php - Fluent APIs Showcase
+**Purpose:** Demonstrates the new fluent, chainable APIs introduced in TART.
+
+**What it shows:**
+- Fluent theme creation with `Theme::make()->withColor()->...`
+- Fluent logo building with `$this->logo()->text()->boxed()->...`
+- Method chaining on command objects
+- Complex real-world deployment example
+- Comparison of fluent vs traditional APIs
+
+**Use this when:** You want to learn the new expressive, Laravel-like syntax.
+
+**Run with:**
+```bash
+php artisan tart:fluent-demo
+```
+
+---
+
 ## Using These Examples
 
 ### In Laravel
@@ -134,7 +153,7 @@ $this->setTheme(new SuccessTheme());  // Green theme
 $this->setTheme(new ErrorTheme());    // Red theme
 ```
 
-### Custom Width
+### Custom Width (Traditional)
 ```php
 $theme = new Theme(
     color: 'blue',
@@ -145,12 +164,32 @@ $theme = new Theme(
 $this->setTheme($theme);
 ```
 
-### Custom Logo
+### Custom Width (Fluent)
+```php
+$theme = Theme::make('blue')
+    ->withTextColor('white')
+    ->withHighlightColor('cyan')
+    ->withMaxWidth(100);
+
+$this->setTheme($theme);
+```
+
+### Custom Logo (Traditional)
 ```php
 $this->displayTextLogo('MY APP', 'box', [
     'text_color' => 'cyan',
     'padding' => 3
 ]);
+```
+
+### Custom Logo (Fluent)
+```php
+$this->logo()
+    ->text('MY APP')
+    ->boxed()
+    ->color('cyan')
+    ->paddingTop(3)
+    ->render();
 ```
 
 ---

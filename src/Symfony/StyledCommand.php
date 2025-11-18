@@ -11,6 +11,7 @@ use IGC\Tart\Concerns\InteractsWithStyling;
 use IGC\Tart\Contracts\StyledCommandInterface;
 use IGC\Tart\Contracts\ThemeInterface;
 use IGC\Tart\Support\AsciiArt;
+use IGC\Tart\Support\LogoBuilder;
 use RuntimeException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -72,9 +73,17 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     }
 
     /**
+     * Create a fluent logo builder for advanced logo creation.
+     */
+    public function logo(): LogoBuilder
+    {
+        return LogoBuilder::make($this->getTheme());
+    }
+
+    /**
      * Display a custom text logo with automatic decoration.
      */
-    public function displayTextLogo(string $text, string $style = 'standard', array $options = []): void
+    public function displayTextLogo(string $text, string $style = 'standard', array $options = []): self
     {
         $options = $this->logoOptions($options);
         $options['style'] = $style;
@@ -84,12 +93,14 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
         foreach ($lines as $line) {
             $this->line($line);
         }
+
+        return $this;
     }
 
     /**
      * Display a multi-line ASCII art logo with decoration.
      */
-    public function displayAsciiLogo(string $asciiArt, array $options = []): void
+    public function displayAsciiLogo(string $asciiArt, array $options = []): self
     {
         $options = $this->logoOptions($options);
 
@@ -98,12 +109,14 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
         foreach ($lines as $line) {
             $this->line($line);
         }
+
+        return $this;
     }
 
     /**
      * Display custom logo lines with automatic decoration.
      */
-    public function displayCustomLogo(array $lines, array $options = []): void
+    public function displayCustomLogo(array $lines, array $options = []): self
     {
         $options = $this->logoOptions($options);
 
@@ -112,6 +125,8 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
         foreach ($formattedLines as $line) {
             $this->line($line);
         }
+
+        return $this;
     }
 
     protected function ensureOutput(): OutputInterface

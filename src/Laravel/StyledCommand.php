@@ -12,6 +12,7 @@ use IGC\Tart\Concerns\InteractsWithStyling;
 use IGC\Tart\Contracts\StyledCommandInterface;
 use IGC\Tart\Contracts\ThemeInterface;
 use IGC\Tart\Support\AsciiArt;
+use IGC\Tart\Support\LogoBuilder;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -187,22 +188,32 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     }
 
     /**
+     * Create a fluent logo builder for advanced logo creation.
+     */
+    public function logo(): LogoBuilder
+    {
+        return LogoBuilder::make($this->getTheme());
+    }
+
+    /**
      * Display a custom text logo with automatic decoration.
      *
      * @param string $text The text to display
      * @param string $style Style: 'standard', 'box', or 'banner'
      * @param array $options Additional options
      */
-    public function displayTextLogo(string $text, string $style = 'standard', array $options = []): void
+    public function displayTextLogo(string $text, string $style = 'standard', array $options = []): self
     {
         $options = $this->logoOptions($options);
         $options['style'] = $style;
-        
+
         $lines = AsciiArt::createTextLogo($text, $options);
-        
+
         foreach ($lines as $line) {
             $this->line($line);
         }
+
+        return $this;
     }
 
     /**
@@ -211,15 +222,17 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      * @param string $asciiArt Multi-line ASCII art
      * @param array $options Additional options
      */
-    public function displayAsciiLogo(string $asciiArt, array $options = []): void
+    public function displayAsciiLogo(string $asciiArt, array $options = []): self
     {
         $options = $this->logoOptions($options);
-        
+
         $lines = AsciiArt::createMultiLineLogo($asciiArt, $options);
-        
+
         foreach ($lines as $line) {
             $this->line($line);
         }
+
+        return $this;
     }
 
     /**
@@ -228,15 +241,17 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      * @param array $lines Array of logo lines
      * @param array $options Configuration options
      */
-    public function displayCustomLogo(array $lines, array $options = []): void
+    public function displayCustomLogo(array $lines, array $options = []): self
     {
         $options = $this->logoOptions($options);
-        
+
         $formattedLines = AsciiArt::createLogo($lines, $options);
-        
+
         foreach ($formattedLines as $line) {
             $this->line($line);
         }
+
+        return $this;
     }
 
 }

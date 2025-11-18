@@ -22,6 +22,18 @@
 Transform boring CLI commands into beautiful, professional applications with styled output, themed blocks, automatic logo generation, and more. Make your terminal applications a joy to use and a work of art!
 
 ```php
+// New fluent APIs (recommended)
+$this->logo()
+    ->text('MY APP')
+    ->boxed()
+    ->color('cyan')
+    ->render();
+
+$this->say('Processing data...');
+$this->good('✓ Step 1 complete');
+$this->success('🎉 Deployment complete!');
+
+// Or use the traditional API (still supported)
 $this->displayTextLogo('MY APP', 'box', ['text_color' => 'cyan']);
 $this->say('Processing data...');
 $this->good('✓ Step 1 complete');
@@ -43,12 +55,13 @@ $this->success('🎉 Deployment complete!');
 - 🎨 **Rich Formatting** - Colored text, backgrounds, and styled blocks
 - 📦 **Block Messages** - Beautiful success, warning, error, and info blocks
 - 🏷️ **Automatic Logos** - Create branded ASCII art logos with one line of code
-- 🎭 **Theme System** - Built-in themes or create your own
+- 🎭 **Theme System** - Built-in themes or create your own with fluent APIs
 - 📊 **Progress Indicators** - Build output line-by-line with columns
 - 🔧 **Framework Agnostic** - Works with Laravel, Symfony, or standalone
 - ✨ **Emoji Support** - Full multi-byte UTF-8 character support
 - 🧩 **Modular** - Use only what you need with traits
-- ⚡ **Easy API** - Simple, expressive, intuitive
+- ⚡ **Fluent APIs** - Chainable methods for expressive, Laravel-like syntax
+- 🔄 **Backward Compatible** - Traditional APIs still supported
 
 ## Installation
 
@@ -83,10 +96,12 @@ class DeployCommand extends StyledCommand
     
     public function handle()
     {
-        // Beautiful branded logo
-        $this->displayTextLogo('DEPLOYMENT SYSTEM', 'box', [
-            'text_color' => 'cyan',
-        ]);
+        // Beautiful branded logo (fluent API)
+        $this->logo()
+            ->text('DEPLOYMENT SYSTEM')
+            ->boxed()
+            ->color('cyan')
+            ->render();
         
         $this->br();
         
@@ -221,29 +236,41 @@ $this->footer('Process', 'Time: 2.5s');  // Footer
 ### Logo Creation 🎨
 
 ```php
-// Simple text logo
-$this->displayTextLogo('MY APP');
+// Fluent API (recommended)
+$this->logo()
+    ->text('MY APP')
+    ->render();
 
-// Boxed logo (emphasis)
-$this->displayTextLogo('DEPLOYMENT', 'box', [
-    'text_color' => 'green',
-]);
+$this->logo()
+    ->text('DEPLOYMENT')
+    ->boxed()
+    ->color('green')
+    ->render();
 
-// Banner logo (separators)
-$this->displayTextLogo('BUILD COMPLETE', 'banner');
+$this->logo()
+    ->text('BUILD COMPLETE')
+    ->banner()
+    ->render();
 
-// Custom ASCII art
+// ASCII art with fluent API
 $asciiArt = <<<'ASCII'
-  ____  ____   ___  _____  ____ 
- |  _ \|  _ \ / _ \|  ___/ ___| 
- | |_) | |_) | | | | |_  \___ \ 
+  ____  ____   ___  _____  ____
+ |  _ \|  _ \ / _ \|  ___/ ___|
+ | |_) | |_) | | | | |_  \___ \
  |  __/|  _ <| |_| |  _|  ___) |
- |_|   |_| \_\\___/|_|   |____/ 
+ |_|   |_| \_\\___/|_|   |____/
 ASCII;
 
-$this->displayAsciiLogo($asciiArt, [
-    'colors' => ['cyan', 'blue', 'white'],
-]);
+$this->logo()
+    ->ascii($asciiArt)
+    ->colors(['cyan', 'blue', 'white'])
+    ->render();
+
+// Traditional API (still supported)
+$this->displayTextLogo('MY APP');
+$this->displayTextLogo('DEPLOYMENT', 'box', ['text_color' => 'green']);
+$this->displayTextLogo('BUILD COMPLETE', 'banner');
+$this->displayAsciiLogo($asciiArt, ['colors' => ['cyan', 'blue', 'white']]);
 ```
 
 ### Line Building & Columns
@@ -276,11 +303,20 @@ $this->hr();        // Horizontal rule
 ```php
 use IGC\Tart\Themes\{DefaultTheme, SuccessTheme, ErrorTheme, Theme};
 
+// Fluent theme creation (recommended)
+$theme = Theme::make('purple')
+    ->withTextColor('white')
+    ->withHighlightColor('yellow')
+    ->withMaxWidth(80);
+
+$this->setTheme($theme);
+$this->header('Success Operations');
+
 // Use built-in theme
 $this->setTheme(new SuccessTheme());
 $this->header('Success Operations');
 
-// Create custom theme
+// Traditional theme creation (still supported)
 $theme = new Theme(
     color: 'purple',
     textColor: 'white',
@@ -341,10 +377,13 @@ cat examples/laravel-example.php
 ```php
 public function handle()
 {
-    $this->displayTextLogo('PROFSS PLATFORM', 'box', [
-        'text_color' => 'cyan',
-    ]);
-    
+    // Fluent logo creation
+    $this->logo()
+        ->text('PROFSS PLATFORM')
+        ->boxed()
+        ->color('cyan')
+        ->render();
+
     // ... application logic ...
 }
 ```
@@ -375,12 +414,19 @@ $this->stat('Report generated in 1.2s');
 ### Themed Operations
 
 ```php
-$this->setTheme(new SuccessTheme());
+// Fluent theme creation
+$theme = Theme::make('green')
+    ->withTextColor('white')
+    ->withHighlightColor('yellow');
+
+$this->setTheme($theme);
 $this->header('Deployment');
 // ... deployment logic ...
-$this->displayTextLogo('SUCCESS', 'banner', [
-    'text_color' => 'green',
-]);
+$this->logo()
+    ->text('SUCCESS')
+    ->banner()
+    ->color('green')
+    ->render();
 ```
 
 ## 🏗️ Architecture
