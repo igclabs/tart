@@ -2107,19 +2107,21 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
     'usedTraitDependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasBlocks.php' => 
@@ -2130,19 +2132,21 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
     'usedTraitDependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasColoredOutput.php' => 
@@ -2153,19 +2157,46 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
     'usedTraitDependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasEnhancedInput.php' => 
+  array (
+    'fileHash' => '5a531e88447668d966a8d00c7ce9c4ebaaa59275',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+    'usedTraitDependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasInteractivity.php' => 
@@ -2176,19 +2207,21 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
     'usedTraitDependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasLineBuilding.php' => 
@@ -2199,19 +2232,121 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
     'usedTraitDependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasLists.php' => 
+  array (
+    'fileHash' => 'a65b0be9bae6a2ef7c4ad6d8edd2b309a13b23c8',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+    'usedTraitDependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasProgressBars.php' => 
+  array (
+    'fileHash' => 'd64535e270646e8f0bb20c762d811e7ecd7c120d',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+    'usedTraitDependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasSpinners.php' => 
+  array (
+    'fileHash' => 'dc917f7cdc7b66e50e9586a6f145cb2127279705',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+    'usedTraitDependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasTables.php' => 
+  array (
+    'fileHash' => '063abb0c9df1e9f2854072d58f54c6f94816bfae',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+    'usedTraitDependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/InteractsWithStyling.php' => 
@@ -2222,19 +2357,21 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
     'usedTraitDependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Contracts/StyledCommandInterface.php' => 
@@ -2245,10 +2382,11 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      7 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Contracts/ThemeInterface.php' => 
@@ -2292,6 +2430,14 @@ return [
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
     ),
   ),
+  '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php' => 
+  array (
+    'fileHash' => '2bf6dbb00ff0cabd1edc0a33883852631c8f30bb',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+    ),
+  ),
   '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php' => 
   array (
     'fileHash' => 'c4d376219fa131e8b1ff61531528e0a96fb4c12d',
@@ -2302,19 +2448,20 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php' => 
   array (
-    'fileHash' => 'dda6afac41102838b74875ea573d7399f7cccd42',
+    'fileHash' => 'af28fd0550454e3dd752ecfe4207059a9101a168',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
       1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
       2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php' => 
   array (
-    'fileHash' => 'ebf1b83f16cbe9857940257fd10b246baee2c761',
+    'fileHash' => 'bd9adb039c4ab901aa02a7894b6669d19510e1e9',
     'dependentFiles' => 
     array (
     ),
@@ -2358,9 +2505,37 @@ return [
       2 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
+  '/home/joe/www/labs/tart/tart/src/Support/ProgressBar.php' => 
+  array (
+    'fileHash' => '482ed6644a90ccbcb8684f2a4618a2f85418900a',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Support/Spinner.php' => 
+  array (
+    'fileHash' => '5acbd6e62e829688411f8bc6e527c4fd5adf8539',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Support/Table.php' => 
+  array (
+    'fileHash' => '105f6780364700e5b0ee261b5904a81347109d3e',
+    'dependentFiles' => 
+    array (
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+    ),
+  ),
   '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php' => 
   array (
-    'fileHash' => '9e2babf2322bfc263cf9110f9d3044af7ba5ed8e',
+    'fileHash' => '2e4ba31cb6b2d5172a992ea00956ae8d64729633',
     'dependentFiles' => 
     array (
     ),
@@ -3912,6 +4087,287 @@ return [
       ),
     )),
   ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasEnhancedInput.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedTraitNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
+       'phpDoc' => NULL,
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'prompt',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Prompt the user for text input.
+     *
+     * @param string $question The question to ask
+     * @param string|null $default Default value if user provides no input
+     * @param Closure|null $validator Optional validation callback
+     * @return string
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+              'closure' => 'Closure',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'question',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'default',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'validator',
+               'type' => '?Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'password',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Prompt the user for hidden input (password).
+     *
+     * @param string $question The question to ask
+     * @return string
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+              'closure' => 'Closure',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'question',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHiddenInputUnix',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get hidden input on Unix/Linux/Mac systems.
+     *
+     * @return string
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+              'closure' => 'Closure',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHiddenInputWindows',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get hidden input on Windows systems.
+     *
+     * @return string
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+              'closure' => 'Closure',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'promptWithValidation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Prompt for input with validation message.
+     *
+     * @param string $question
+     * @param string|null $default
+     * @param string $validationMessage
+     * @param Closure $validator
+     * @return string
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+              'closure' => 'Closure',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'question',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'default',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'validationMessage',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'validator',
+               'type' => 'Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasInteractivity.php' => 
   array (
     0 => 
@@ -4187,6 +4643,387 @@ return [
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'color',
                'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasLists.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedTraitNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Concerns\\HasLists',
+       'phpDoc' => NULL,
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'bulletList',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<int|string, mixed> $items
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'items',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'indent',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'orderedList',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $items
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'items',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'indent',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'start',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'taskList',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $items
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'items',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasProgressBars.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedTraitNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+       'phpDoc' => NULL,
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'progressBar',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'IGC\\Tart\\Support\\ProgressBar',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'total',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'label',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'callback',
+               'type' => '?Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasSpinners.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedTraitNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Concerns\\HasSpinners',
+       'phpDoc' => NULL,
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'spinner',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'IGC\\Tart\\Support\\Spinner',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'callback',
+               'type' => '?Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Concerns/HasTables.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedTraitNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Concerns\\HasTables',
+       'phpDoc' => NULL,
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'renderTable',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $headers
+     * @param array<array<string>> $rows
+     */',
+             'namespace' => 'IGC\\Tart\\Concerns',
+             'uses' => 
+            array (
+              'table' => 'IGC\\Tart\\Support\\Table',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'headers',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'rows',
+               'type' => 'array',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -5884,6 +6721,154 @@ return [
       ),
     )),
   ),
+  '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Laravel\\Commands\\TartNewFeaturesDemo',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'IGC\\Tart\\Laravel\\StyledCommand',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'signature',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'description',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'handle',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoLists',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoTables',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoProgressBar',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoInput',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartTestCommand.php' => 
   array (
     0 => 
@@ -6039,8 +7024,13 @@ return [
         1 => 'IGC\\Tart\\Concerns\\HasBlocks',
         2 => 'IGC\\Tart\\Concerns\\HasLineBuilding',
         3 => 'IGC\\Tart\\Concerns\\HasInteractivity',
-        4 => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
-        5 => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
+        4 => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
+        5 => 'IGC\\Tart\\Concerns\\HasLists',
+        6 => 'IGC\\Tart\\Concerns\\HasTables',
+        7 => 'IGC\\Tart\\Concerns\\HasProgressBars',
+        8 => 'IGC\\Tart\\Concerns\\HasSpinners',
+        9 => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
+        10 => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
       ),
        'traitUseAdaptations' => 
       array (
@@ -6086,8 +7076,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6151,8 +7146,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6205,8 +7205,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6248,8 +7253,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6313,8 +7323,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6359,8 +7374,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6403,8 +7423,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6448,8 +7473,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6491,8 +7521,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6536,8 +7571,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6579,8 +7619,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6626,8 +7671,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6705,8 +7755,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6773,8 +7828,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -6879,10 +7939,6 @@ return [
              'namespace' => 'IGC\\Tart\\Laravel',
              'uses' => 
             array (
-              'tartdemocommand' => 'IGC\\Tart\\Laravel\\Commands\\TartDemoCommand',
-              'tartdemofullcommand' => 'IGC\\Tart\\Laravel\\Commands\\TartDemoFullCommand',
-              'tartfluentdemocommand' => 'IGC\\Tart\\Laravel\\Commands\\TartFluentDemoCommand',
-              'tarttestcommand' => 'IGC\\Tart\\Laravel\\Commands\\TartTestCommand',
               'serviceprovider' => 'Illuminate\\Support\\ServiceProvider',
             ),
              'constUses' => 
@@ -6914,10 +7970,6 @@ return [
              'namespace' => 'IGC\\Tart\\Laravel',
              'uses' => 
             array (
-              'tartdemocommand' => 'IGC\\Tart\\Laravel\\Commands\\TartDemoCommand',
-              'tartdemofullcommand' => 'IGC\\Tart\\Laravel\\Commands\\TartDemoFullCommand',
-              'tartfluentdemocommand' => 'IGC\\Tart\\Laravel\\Commands\\TartFluentDemoCommand',
-              'tarttestcommand' => 'IGC\\Tart\\Laravel\\Commands\\TartTestCommand',
               'serviceprovider' => 'Illuminate\\Support\\ServiceProvider',
             ),
              'constUses' => 
@@ -9242,6 +10294,1071 @@ return [
       ),
     )),
   ),
+  '/home/joe/www/labs/tart/tart/src/Support/ProgressBar.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Support\\ProgressBar',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'output',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'total',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'int',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'current',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'int',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'label',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'barWidth',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'int',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'barChar',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'emptyChar',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'output',
+               'type' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'total',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'label',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'start',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'advance',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'step',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'finish',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'render',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Support/Spinner.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Support\\Spinner',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'output',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'message',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'style',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'running',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'bool',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'frame',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'int',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'styles',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/** @var array<string, array<string>> */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'array',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'output',
+               'type' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setStyle',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'style',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setMessage',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'start',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'stop',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'finalMessage',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tick',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'isRunning',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/home/joe/www/labs/tart/tart/src/Support/Table.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'IGC\\Tart\\Support\\Table',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'output',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'headers',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/** @var array<string> */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'array',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'rows',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/** @var array<array<string>> */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'array',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'align',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/** @var array<string> */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'array',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'style',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'output',
+               'type' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setHeaders',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $headers
+     */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'headers',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'addRow',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $row
+     */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'row',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setRows',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<array<string>> $rows
+     */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'rows',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'render',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'calculateColumnWidths',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<int>
+     */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'visualLength',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'string',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'renderRow',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $row
+     * @param array<int> $widths
+     */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'row',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'widths',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'isHeader',
+               'type' => 'bool',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'renderSeparator',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<int> $widths
+     */',
+             'namespace' => 'IGC\\Tart\\Support',
+             'uses' => 
+            array (
+              'outputinterface' => 'Symfony\\Component\\Console\\Output\\OutputInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'widths',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php' => 
   array (
     0 => 
@@ -9261,8 +11378,13 @@ return [
         1 => 'IGC\\Tart\\Concerns\\HasBlocks',
         2 => 'IGC\\Tart\\Concerns\\HasLineBuilding',
         3 => 'IGC\\Tart\\Concerns\\HasInteractivity',
-        4 => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
-        5 => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
+        4 => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
+        5 => 'IGC\\Tart\\Concerns\\HasLists',
+        6 => 'IGC\\Tart\\Concerns\\HasTables',
+        7 => 'IGC\\Tart\\Concerns\\HasProgressBars',
+        8 => 'IGC\\Tart\\Concerns\\HasSpinners',
+        9 => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
+        10 => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
       ),
        'traitUseAdaptations' => 
       array (
@@ -9299,8 +11421,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9354,8 +11481,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9398,8 +11530,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9504,8 +11641,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9577,8 +11719,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9623,8 +11770,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9702,8 +11854,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',
@@ -9771,8 +11928,13 @@ return [
               'configuresformatter' => 'IGC\\Tart\\Concerns\\ConfiguresFormatter',
               'hasblocks' => 'IGC\\Tart\\Concerns\\HasBlocks',
               'hascoloredoutput' => 'IGC\\Tart\\Concerns\\HasColoredOutput',
+              'hasenhancedinput' => 'IGC\\Tart\\Concerns\\HasEnhancedInput',
               'hasinteractivity' => 'IGC\\Tart\\Concerns\\HasInteractivity',
               'haslinebuilding' => 'IGC\\Tart\\Concerns\\HasLineBuilding',
+              'haslists' => 'IGC\\Tart\\Concerns\\HasLists',
+              'hasprogressbars' => 'IGC\\Tart\\Concerns\\HasProgressBars',
+              'hasspinners' => 'IGC\\Tart\\Concerns\\HasSpinners',
+              'hastables' => 'IGC\\Tart\\Concerns\\HasTables',
               'interactswithstyling' => 'IGC\\Tart\\Concerns\\InteractsWithStyling',
               'styledcommandinterface' => 'IGC\\Tart\\Contracts\\StyledCommandInterface',
               'themeinterface' => 'IGC\\Tart\\Contracts\\ThemeInterface',

@@ -12,7 +12,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/php-%5E8.2-blue" alt="PHP Version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-  <img src="https://img.shields.io/badge/version-1.1.4-brightgreen" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.1.5-brightgreen" alt="Version">
 </p>
 
 ---
@@ -57,6 +57,11 @@ $this->success('🎉 Deployment complete!');
 - 🏷️ **Automatic Logos** - Create branded ASCII art logos with one line of code
 - 🎭 **Theme System** - Built-in themes or create your own with fluent APIs
 - 📊 **Progress Indicators** - Build output line-by-line with columns
+- 🔄 **Progress Bars** - Visual progress tracking with percentages (NEW!)
+- ⏳ **Spinners** - Animated loading indicators with 7 styles (NEW!)
+- 📝 **Lists** - Bullet, numbered, nested, and task lists (NEW!)
+- 📊 **Tables** - Beautiful table rendering with auto-width (NEW!)
+- 💬 **Interactive Input** - Text prompts and password input (NEW!)
 - 🔧 **Framework Agnostic** - Works with Laravel, Symfony, or standalone
 - ✨ **Emoji Support** - Full multi-byte UTF-8 character support
 - 🧩 **Modular** - Use only what you need with traits
@@ -76,7 +81,7 @@ After requiring the package, you can confirm that Composer resolved the correct 
 ```bash
 composer show igclabs/tart
 # name     : igclabs/tart
-# versions : * 1.1.4
+# versions : * 1.1.5
 ```
 
 ## Quick Start
@@ -181,12 +186,15 @@ php artisan tart:demo
 # One-line test of all features
 php artisan tart:test
 
+# NEW FEATURES demo (lists, tables, progress bars, spinners, input)
+php artisan tart:new-features
+
 # Comprehensive showcase of ALL features
 php artisan tart:demo-full
 php artisan tart:demo-full --theme=success
 php artisan tart:demo-full --theme=error
 
-# Fluent APIs showcase (new in v1.2!)
+# Fluent APIs showcase
 php artisan tart:fluent-demo
 ```
 
@@ -474,8 +482,13 @@ composer test
 - ✅ 7 block message types
 - ✅ 3 logo styles (standard, box, banner)
 - ✅ Theme system with 3 built-in themes
+- ✅ Interactive input (text, password, validation)
+- ✅ Progress bars with live updates
+- ✅ Spinners with 7 animation styles
+- ✅ Lists (bullet, ordered, nested, task)
+- ✅ Table rendering with auto-sizing
 - ✅ Multi-byte character support (emojis!)
-- ✅ Unit and integration tests
+- ✅ 50+ unit and integration tests
 - ✅ Complete documentation
 - ✅ Working examples
 

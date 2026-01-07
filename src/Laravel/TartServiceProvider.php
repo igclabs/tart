@@ -2,10 +2,6 @@
 
 namespace IGC\Tart\Laravel;
 
-use IGC\Tart\Laravel\Commands\TartDemoCommand;
-use IGC\Tart\Laravel\Commands\TartDemoFullCommand;
-use IGC\Tart\Laravel\Commands\TartFluentDemoCommand;
-use IGC\Tart\Laravel\Commands\TartTestCommand;
 use Illuminate\Support\ServiceProvider;
 
 class TartServiceProvider extends ServiceProvider
@@ -34,10 +30,11 @@ class TartServiceProvider extends ServiceProvider
         ], 'tart-config');
 
         $this->commands([
-            TartDemoCommand::class,
-            TartDemoFullCommand::class,
-            TartFluentDemoCommand::class,
-            TartTestCommand::class,
+            Commands\TartDemoCommand::class,
+            Commands\TartDemoFullCommand::class,
+            Commands\TartFluentDemoCommand::class,
+            Commands\TartTestCommand::class,
+            Commands\TartNewFeaturesDemo::class,
         ]);
     }
 

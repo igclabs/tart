@@ -1,126 +1,66 @@
 # Changelog
 
-All notable changes to TART (Terminal Art for Artisan) will be documented in this file.
+All notable changes to TART will be documented in this file.
 
-## [1.1.0] - 2025-11-16
-
-### Added
-- **Automatic Logo Creation** - New `AsciiArt` support class enables:
-  - `displayTextLogo()` for decorated text logos
-  - `displayAsciiLogo()` for multi-line ASCII art
-  - `displayCustomLogo()` for fully custom layouts
-  - Standard, box, and banner presets with configurable colors, width, and padding
-- Comprehensive logo creation examples and updated documentation (`LOGO-CREATION.md`)
-
-### Changed
-- **Rebranding** to TART (Terminal Art for Artisan)
-  - Namespace changed from `IGC\ConsoleArtist` to `IGC\Tart`
-  - Base demo command renamed from `console-artist:demo` to `tart:demo`
-  - Repository, docs, and assets updated to the new name
-- `StyledCommand` enhanced with logo display helpers backed by the new `AsciiArt` class
-
-## [1.0.1] - 2025-11-16
-
-### Fixed
-- **Emoji Alignment Issue** - Fixed padding and alignment for multi-byte characters (emojis)
-  - Added `LineFormatter::visualLength()` method for proper UTF-8 character counting
-  - Updated `pad()`, `padding()`, and `center()` to use `mb_strlen()` instead of `strlen()`
-  - Changed `substr()` to `mb_substr()` for multi-byte safety
-  - Lines with emojis (✓, ✗, ⚠, ℹ, 🎉) now align correctly
-  - Added comprehensive tests for emoji handling
-
-### Changed
-- Updated `BaseCommand::entityBlock()` to use `LineFormatter::visualLength()`
-- Added 5 new unit tests for multi-byte character support
-
-## [1.0.0] - 2025-11-16
-
-### Added
-- Initial release of TART (Terminal Art for Artisan) package
-- Extracted from legacy BaseCommand class (388 lines → 44 lines)
-- Modular trait-based architecture:
-  - `HasColoredOutput` - Color formatting and basic output
-  - `HasBlocks` - Block-style messages (success, warning, error, etc.)
-  - `HasLineBuilding` - Build output line-by-line with columns
-  - `HasInteractivity` - Interactive features with auto-answer support
-- Theme system with 4 built-in themes:
-  - `DefaultTheme` (blue)
-  - `SuccessTheme` (green)
-  - `ErrorTheme` (red)
-  - `Theme` (customizable base)
-- Support classes:
-  - `LineFormatter` - Line padding, centering, path highlighting
-  - `ColorHelper` - Color formatting utilities
-- Laravel adapter: `StyledCommand`
-- Comprehensive documentation (README, INSTALLATION, PACKAGE-INFO)
-- Unit and integration tests
-- MIT License
-
-### Features
-- Beautiful colored terminal output
-- Block-style messages (headers, footers, success, warnings, errors)
-- Line-by-line output building with column support
-- Path highlighting for file paths
-- Auto-answer mode for non-interactive scripts
-- Logo rendering (ProFusion and EnMasse logos)
-- Horizontal rules and blank lines
-- Theme switching and customization
-- Full backward compatibility with existing BaseCommand API
-
-### Fixed
-- Fixed return value bug in original `run()` method (was returning `1` instead of parent result)
-- Fixed bitwise operator bug (`>>` → `>`) in line length checks
-- Fixed method signature compatibility issue with Laravel's `confirm()` method
-- Improved method visibility (protected instead of private for extensibility)
-
-### Technical
-- PHP 8.0+ required
-- PSR-4 autoloading
-- Comprehensive PHPDoc comments
-- Type hints throughout
-- Symfony Console 5.0+ or 6.0+ compatibility
-- Laravel 9.0+ compatibility
-
-### Testing
-- Unit tests for LineFormatter
-- Unit tests for ColorHelper
-- Unit tests for Theme classes
-- Integration tests for StyledCommand
-- Example command included
-
-## [1.0.1] - 2025-11-16
-
-### Fixed
-- **Emoji Alignment Issue** - Fixed padding and alignment for multi-byte characters (emojis)
-  - Added `LineFormatter::visualLength()` method for proper UTF-8 character counting
-  - Updated `pad()`, `padding()`, and `center()` to use `mb_strlen()` instead of `strlen()`
-  - Changed `substr()` to `mb_substr()` for multi-byte safety
-  - Lines with emojis (✓, ✗, ⚠, ℹ, 🎉) now align correctly
-  - Added comprehensive tests for emoji handling
-
-### Changed
-- Updated `BaseCommand::entityBlock()` to use `LineFormatter::visualLength()`
-- Added 5 new unit tests for multi-byte character support
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
 ### Added
-- Laravel `TartServiceProvider` that auto-registers the bundled `tart:demo` command for immediate previews
-- Publishable `config/tart.php` for customizing the default theme, logo palette, and auto-answer behavior
-- `IGC\Tart\Symfony\StyledCommand` for framework-agnostic Console apps
+- **Interactive Input**: New `prompt()` method for text input with validation support
+- **Password Input**: New `password()` method for hidden password entry (cross-platform)
+- **Progress Bars**: Visual progress tracking with percentages and labels via `progressBar()`
+- **Spinners**: Animated loading indicators with 7 styles (dots, dots2, dots3, line, arrow, pulse, bounce)
+- **Lists**: Three list types - `bulletList()`, `orderedList()`, and `taskList()`
+- **Tables**: Beautiful table rendering with `renderTable()` and auto-width calculation
+- **Demo Command**: New `tart:new-features` command showcasing all new features
+- **17 new unit tests** for all new features (total: 53 tests, 118 assertions)
 
 ### Changed
-- Logo creation helpers now honor header/footer/padding/color options (with dedicated unit tests)
+- Updated README with new features
+- Updated Quick Reference guide with new API methods
+- Enhanced documentation with usage examples
 
-### Planned
-- Symfony Console adapter (for non-Laravel projects)
-- Table rendering support
-- Progress bar enhancements
-- Animation support (spinners, loading indicators)
-- Additional theme presets
-- Tree/hierarchy view rendering
+### Fixed
+- PHPStan level 7 compliance maintained (0 errors)
+- All existing tests continue to pass
 
----
+## [1.1.3] - 2024-11-18
 
-**Note:** This package was extracted from an internal project to provide reusable, beautiful CLI output formatting for PHP applications.
+### Fixed
+- PHPStan errors resolved (61 → 0 errors)
+- Runtime bugs in `LineFormatter::highlightPath()` and `HasColoredOutput::bad()`
+- Unsafe `new static()` usage replaced with `new self()`
+- Unreachable match arms in demo commands
+- README badge PHP version corrected to ^8.2
 
+### Added
+- PHP-CS-Fixer configuration for code style enforcement
+- Array type hints throughout codebase for PHPStan compliance
+- Composer scripts: `cs-fix` and `cs-check`
+
+## [1.1.2] - 2024-11-16
+
+### Added
+- Fluent theme API with `Theme::make()` and chainable methods
+- Fluent logo builder with `$this->logo()` API
+- New demo command `tart:fluent-demo` showcasing fluent APIs
+
+## [1.1.0] - 2024-11-16
+
+### Added
+- Initial public release
+- Basic output methods (say, good, bad, state, cool)
+- Block messages (header, title, success, notice, warning, failure, stat, footer)
+- Logo generation (text, ASCII, boxed, banner)
+- Theme system with 3 built-in themes
+- Line building for progressive output
+- Path highlighting
+- Laravel and Symfony support
+- Demo commands
+
+[Unreleased]: https://github.com/igclabs/tart/compare/v1.1.3...HEAD
+[1.1.3]: https://github.com/igclabs/tart/compare/v1.1.2...v1.1.3
+[1.1.2]: https://github.com/igclabs/tart/compare/v1.1.0...v1.1.2
+[1.1.0]: https://github.com/igclabs/tart/releases/tag/v1.1.0

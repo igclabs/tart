@@ -2,6 +2,88 @@
 
 > Install with `composer require igclabs/tart` and extend either `IGC\Tart\Laravel\StyledCommand` or `IGC\Tart\Symfony\StyledCommand`.
 
+## 💬 Interactive Input (NEW!)
+
+```php
+// Text input with default
+$name = $this->prompt('What is your name?', 'Anonymous');
+
+// With validation
+$email = $this->prompt('Email?', null, function($value) {
+    return filter_var($value, FILTER_VALIDATE_EMAIL) !== false;
+});
+
+// Hidden password input
+$password = $this->password('Enter password');
+```
+
+## 📝 Lists (NEW!)
+
+```php
+// Bullet list
+$this->bulletList(['Item 1', 'Item 2', 'Item 3']);
+
+// Nested list
+$this->bulletList([
+    'Item 1',
+    'Nested' => ['Sub A', 'Sub B'],
+]);
+
+// Ordered/numbered list
+$this->orderedList(['Step 1', 'Step 2', 'Step 3']);
+
+// Task list with checkmarks
+$this->taskList([
+    '✓ Completed task',
+    '✗ Failed task',
+    '• Pending task',
+]);
+```
+
+## 📊 Tables (NEW!)
+
+```php
+$this->renderTable(
+    ['Name', 'Status', 'Count'],
+    [
+        ['Database', 'Online', '127'],
+        ['API', 'Online', '89'],
+        ['Cache', 'Degraded', '42'],
+    ]
+);
+```
+
+## 🔄 Progress Bars (NEW!)
+
+```php
+// With callback
+$this->progressBar(100, 'Processing', function($bar) {
+    foreach ($items as $item) {
+        // ... process item ...
+        $bar->advance();
+    }
+});
+
+// Manual control
+$bar = $this->progressBar(100, 'Uploading');
+$bar->advance(10);
+$bar->advance(25);
+$bar->finish();
+```
+
+## ⏳ Spinners (NEW!)
+
+```php
+// Simple spinner
+$spinner = $this->spinner('Loading data...');
+$spinner->start();
+// ... do work ...
+$spinner->stop('Done!');
+
+// Different styles: dots, dots2, dots3, line, arrow, pulse, bounce
+$spinner->setStyle('pulse');
+```
+
 ## 📝 Basic Output
 
 ```php

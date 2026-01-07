@@ -5,8 +5,13 @@ namespace IGC\Tart\Laravel;
 use IGC\Tart\Concerns\ConfiguresFormatter;
 use IGC\Tart\Concerns\HasBlocks;
 use IGC\Tart\Concerns\HasColoredOutput;
+use IGC\Tart\Concerns\HasEnhancedInput;
 use IGC\Tart\Concerns\HasInteractivity;
 use IGC\Tart\Concerns\HasLineBuilding;
+use IGC\Tart\Concerns\HasLists;
+use IGC\Tart\Concerns\HasProgressBars;
+use IGC\Tart\Concerns\HasSpinners;
+use IGC\Tart\Concerns\HasTables;
 use IGC\Tart\Concerns\InteractsWithStyling;
 use IGC\Tart\Contracts\StyledCommandInterface;
 use IGC\Tart\Contracts\ThemeInterface;
@@ -22,6 +27,11 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     use HasBlocks;
     use HasLineBuilding;
     use HasInteractivity;
+    use HasEnhancedInput;
+    use HasLists;
+    use HasTables;
+    use HasProgressBars;
+    use HasSpinners;
     use InteractsWithStyling;
     use ConfiguresFormatter;
 

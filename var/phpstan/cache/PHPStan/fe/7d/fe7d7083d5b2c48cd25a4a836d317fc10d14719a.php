@@ -109,7 +109,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php' => 
     array (
-      0 => 'ebf1b83f16cbe9857940257fd10b246baee2c761',
+      0 => 'bd9adb039c4ab901aa02a7894b6669d19510e1e9',
       1 => 
       array (
         0 => 'igc\\tart\\laravel\\tartserviceprovider',
@@ -126,7 +126,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php' => 
     array (
-      0 => 'dda6afac41102838b74875ea573d7399f7cccd42',
+      0 => 'af28fd0550454e3dd752ecfe4207059a9101a168',
       1 => 
       array (
         0 => 'igc\\tart\\laravel\\styledcommand',
@@ -301,7 +301,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php' => 
     array (
-      0 => '9e2babf2322bfc263cf9110f9d3044af7ba5ed8e',
+      0 => '2e4ba31cb6b2d5172a992ea00956ae8d64729633',
       1 => 
       array (
         0 => 'igc\\tart\\symfony\\styledcommand',
@@ -481,6 +481,169 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         2 => 'igc\\tart\\contracts\\gethighlightcolor',
         3 => 'igc\\tart\\contracts\\getmaxlinewidth',
         4 => 'igc\\tart\\contracts\\getcolors',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Support/ProgressBar.php' => 
+    array (
+      0 => '482ed6644a90ccbcb8684f2a4618a2f85418900a',
+      1 => 
+      array (
+        0 => 'igc\\tart\\support\\progressbar',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\support\\__construct',
+        1 => 'igc\\tart\\support\\start',
+        2 => 'igc\\tart\\support\\advance',
+        3 => 'igc\\tart\\support\\finish',
+        4 => 'igc\\tart\\support\\render',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Support/Spinner.php' => 
+    array (
+      0 => '5acbd6e62e829688411f8bc6e527c4fd5adf8539',
+      1 => 
+      array (
+        0 => 'igc\\tart\\support\\spinner',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\support\\__construct',
+        1 => 'igc\\tart\\support\\setstyle',
+        2 => 'igc\\tart\\support\\setmessage',
+        3 => 'igc\\tart\\support\\start',
+        4 => 'igc\\tart\\support\\stop',
+        5 => 'igc\\tart\\support\\tick',
+        6 => 'igc\\tart\\support\\isrunning',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Support/Table.php' => 
+    array (
+      0 => '105f6780364700e5b0ee261b5904a81347109d3e',
+      1 => 
+      array (
+        0 => 'igc\\tart\\support\\table',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\support\\__construct',
+        1 => 'igc\\tart\\support\\setheaders',
+        2 => 'igc\\tart\\support\\addrow',
+        3 => 'igc\\tart\\support\\setrows',
+        4 => 'igc\\tart\\support\\render',
+        5 => 'igc\\tart\\support\\calculatecolumnwidths',
+        6 => 'igc\\tart\\support\\visuallength',
+        7 => 'igc\\tart\\support\\renderrow',
+        8 => 'igc\\tart\\support\\renderseparator',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php' => 
+    array (
+      0 => '2bf6dbb00ff0cabd1edc0a33883852631c8f30bb',
+      1 => 
+      array (
+        0 => 'igc\\tart\\laravel\\commands\\tartnewfeaturesdemo',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\laravel\\commands\\handle',
+        1 => 'igc\\tart\\laravel\\commands\\demolists',
+        2 => 'igc\\tart\\laravel\\commands\\demotables',
+        3 => 'igc\\tart\\laravel\\commands\\demoprogressbar',
+        4 => 'igc\\tart\\laravel\\commands\\demoinput',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Concerns/HasEnhancedInput.php' => 
+    array (
+      0 => '5a531e88447668d966a8d00c7ce9c4ebaaa59275',
+      1 => 
+      array (
+        0 => 'igc\\tart\\concerns\\hasenhancedinput',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\concerns\\prompt',
+        1 => 'igc\\tart\\concerns\\password',
+        2 => 'igc\\tart\\concerns\\gethiddeninputunix',
+        3 => 'igc\\tart\\concerns\\gethiddeninputwindows',
+        4 => 'igc\\tart\\concerns\\promptwithvalidation',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Concerns/HasSpinners.php' => 
+    array (
+      0 => 'dc917f7cdc7b66e50e9586a6f145cb2127279705',
+      1 => 
+      array (
+        0 => 'igc\\tart\\concerns\\hasspinners',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\concerns\\spinner',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Concerns/HasLists.php' => 
+    array (
+      0 => 'a65b0be9bae6a2ef7c4ad6d8edd2b309a13b23c8',
+      1 => 
+      array (
+        0 => 'igc\\tart\\concerns\\haslists',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\concerns\\bulletlist',
+        1 => 'igc\\tart\\concerns\\orderedlist',
+        2 => 'igc\\tart\\concerns\\tasklist',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Concerns/HasProgressBars.php' => 
+    array (
+      0 => 'd64535e270646e8f0bb20c762d811e7ecd7c120d',
+      1 => 
+      array (
+        0 => 'igc\\tart\\concerns\\hasprogressbars',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\concerns\\progressbar',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/home/joe/www/labs/tart/tart/src/Concerns/HasTables.php' => 
+    array (
+      0 => '063abb0c9df1e9f2854072d58f54c6f94816bfae',
+      1 => 
+      array (
+        0 => 'igc\\tart\\concerns\\hastables',
+      ),
+      2 => 
+      array (
+        0 => 'igc\\tart\\concerns\\rendertable',
       ),
       3 => 
       array (
