@@ -52,4 +52,3 @@ trait HasLineBuilding
         $this->appendLine($text, $color);
     }
 }
-

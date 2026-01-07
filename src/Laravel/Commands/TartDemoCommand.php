@@ -134,4 +134,3 @@ class TartDemoCommand extends StyledCommand
         return max(24, $this->getTheme()->getMaxLineWidth() + 8);
     }
 }
-

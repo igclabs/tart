@@ -18,18 +18,18 @@ trait HasBlocks
         string $pad = '  '
     ): void {
         $this->blockLine($bit, $bgcolor, $this->theme->getHighlightColor(), $pad);
-        
+
         if ($big) {
             $this->blockLine(' ', $bgcolor, $fgcolor, $pad);
         }
-        
+
         $centered = LineFormatter::center($message, $this->theme->getMaxLineWidth());
         $this->bline($this->color($centered, $bgcolor, $fgcolor), $this->theme->getColor(), $pad);
-        
+
         if ($big) {
             $this->blockLine(' ', $bgcolor, $fgcolor, $pad);
         }
-        
+
         $this->blockLine($bit, $bgcolor, $this->theme->getHighlightColor(), $pad);
     }
 
@@ -41,11 +41,11 @@ trait HasBlocks
         $maxLine = $this->theme->getMaxLineWidth();
         $times = (int) ceil($maxLine / strlen($bit));
         $line = '';
-        
+
         if ($times > 0) {
             $line = str_repeat($bit, abs($times));
         }
-        
+
         $line = substr($line, 0, $maxLine);
         $this->bline($this->color($line, $bgcolor, $fgcolor), $this->theme->getColor(), $pad);
     }
@@ -76,7 +76,7 @@ trait HasBlocks
         } else {
             $this->br();
         }
-        
+
         $this->block(
             $reportname . ' Finished',
             $this->theme->getColor(),
@@ -147,7 +147,7 @@ trait HasBlocks
     protected function colorBlocks(int $lines = 8): void
     {
         $colors = $this->theme->getColors();
-        
+
         for ($r = 0; $r < $lines; ++$r) {
             $rw = '';
             for ($c = 0; $c < 40; ++$c) {
@@ -159,4 +159,3 @@ trait HasBlocks
         }
     }
 }
-

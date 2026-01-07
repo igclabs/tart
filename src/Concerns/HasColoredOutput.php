@@ -13,13 +13,13 @@ trait HasColoredOutput
     protected function prepLine(string $line, string $text = 'white', string $pad = '  ', string $gap = '  '): string
     {
         $line = LineFormatter::pad($line, $this->theme->getMaxLineWidth());
-        
+
         if ($pad === '') {
             $gap .= '  ';
         }
 
         $color = $this->theme->getColor();
-        
+
         return "<bg={$color}>{$gap}</bg={$color}>{$pad}<fg={$text}>{$line}</fg={$text}>{$pad}<bg={$color}>{$gap}</bg={$color}>";
     }
 
@@ -33,7 +33,7 @@ trait HasColoredOutput
         }
 
         $color = $this->theme->getColor();
-        
+
         return "<bg={$color}>{$gap}</bg={$color}>{$pad}<fg={$text}>{$line}";
     }
 
@@ -47,7 +47,7 @@ trait HasColoredOutput
         }
 
         $color = $this->theme->getColor();
-        
+
         return LineFormatter::padding($line, $this->theme->getMaxLineWidth()) . "</fg={$text}>{$pad}<bg={$color}>{$gap}</bg={$color}>" . PHP_EOL;
     }
 
@@ -57,11 +57,11 @@ trait HasColoredOutput
     protected function bline(string $line, string $text = 'white', string $pad = '  ', string $gap = '  '): void
     {
         $line = $this->prepLine($line, $text, $pad, $gap);
-        
+
         if ($this->active) {
             $this->closeLine();
         }
-        
+
         $this->line($line);
     }
 
@@ -155,11 +155,13 @@ trait HasColoredOutput
         $parts = explode('#2', $error);
         $error = $parts[0];
         $maxLine = $this->theme->getMaxLineWidth();
-        
+
         foreach (explode("\n", $error) as $message) {
-            foreach (str_split($message, $maxLine - 1) as $m) {
+            // Ensure chunk size is at least 1
+            $chunkSize = max(1, $maxLine - 1);
+            foreach (str_split($message, $chunkSize) as $m) {
                 $m .= ' ';
-                $m = str_pad($m, $maxLine - 1, ' ', STR_PAD_RIGHT);
+                $m = str_pad($m, $chunkSize, ' ', STR_PAD_RIGHT);
                 $this->bline($m, 'red');
             }
         }
@@ -173,4 +175,3 @@ trait HasColoredOutput
         $this->bline($this->color($message, 'blue', 'cyan'));
     }
 }
-

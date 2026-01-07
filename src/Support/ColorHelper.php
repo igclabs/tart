@@ -36,4 +36,3 @@ class ColorHelper
         return "<options=bold>{$message}</options=bold>";
     }
 }
-

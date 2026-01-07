@@ -2,11 +2,11 @@
 
 namespace IGC\Tart\Laravel;
 
-use Illuminate\Support\ServiceProvider;
 use IGC\Tart\Laravel\Commands\TartDemoCommand;
 use IGC\Tart\Laravel\Commands\TartDemoFullCommand;
 use IGC\Tart\Laravel\Commands\TartFluentDemoCommand;
 use IGC\Tart\Laravel\Commands\TartTestCommand;
+use Illuminate\Support\ServiceProvider;
 
 class TartServiceProvider extends ServiceProvider
 {
@@ -50,4 +50,3 @@ class TartServiceProvider extends ServiceProvider
         return $this->app->basePath('config/tart.php');
     }
 }
-

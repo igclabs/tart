@@ -3,8 +3,8 @@
 namespace IGC\Tart\Laravel\Commands;
 
 use IGC\Tart\Laravel\StyledCommand;
-use IGC\Tart\Themes\SuccessTheme;
 use IGC\Tart\Themes\ErrorTheme;
+use IGC\Tart\Themes\SuccessTheme;
 
 /**
  * Comprehensive TART Demo Command
@@ -89,7 +89,7 @@ class TartDemoFullCommand extends StyledCommand
         // Optional: Show text logo
         $this->displayTextLogo('TART', 'banner', [
             'color' => 'cyan',
-            'padding' => 2
+            'padding' => 2,
         ]);
 
         $this->br();
@@ -209,6 +209,7 @@ class TartDemoFullCommand extends StyledCommand
         }
 
         $this->notice('Skipping text style demo');
+
         return false;
     }
 

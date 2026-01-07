@@ -10,8 +10,12 @@ class Theme implements ThemeInterface
     protected string $textColor;
     protected string $highlightColor;
     protected int $maxLineWidth;
+    /** @var array<string> */
     protected array $colors;
 
+    /**
+     * @param array<string> $colors
+     */
     public function __construct(
         string $color = 'blue',
         string $textColor = 'white',
@@ -46,6 +50,9 @@ class Theme implements ThemeInterface
         return $this->maxLineWidth;
     }
 
+    /**
+     * @return array<string>
+     */
     public function getColors(): array
     {
         return $this->colors;
@@ -57,6 +64,7 @@ class Theme implements ThemeInterface
     public function withColor(string $color): self
     {
         $this->color = $color;
+
         return $this;
     }
 
@@ -66,6 +74,7 @@ class Theme implements ThemeInterface
     public function withTextColor(string $textColor): self
     {
         $this->textColor = $textColor;
+
         return $this;
     }
 
@@ -75,6 +84,7 @@ class Theme implements ThemeInterface
     public function withHighlightColor(string $highlightColor): self
     {
         $this->highlightColor = $highlightColor;
+
         return $this;
     }
 
@@ -84,15 +94,19 @@ class Theme implements ThemeInterface
     public function withMaxWidth(int $maxLineWidth): self
     {
         $this->maxLineWidth = $maxLineWidth;
+
         return $this;
     }
 
     /**
      * Set the color palette and return self for method chaining.
+     *
+     * @param array<string> $colors
      */
     public function withColors(array $colors): self
     {
         $this->colors = $colors;
+
         return $this;
     }
 
@@ -101,7 +115,6 @@ class Theme implements ThemeInterface
      */
     public static function make(string $color = 'blue'): self
     {
-        return new static(color: $color);
+        return new self(color: $color);
     }
 }
-

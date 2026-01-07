@@ -2,8 +2,8 @@
 
 namespace IGC\Tart\Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
 use IGC\Tart\Support\LineFormatter;
+use PHPUnit\Framework\TestCase;
 
 class LineFormatterTest extends TestCase
 {
@@ -11,7 +11,7 @@ class LineFormatterTest extends TestCase
     {
         $line = 'Hello';
         $result = LineFormatter::padding($line, 10);
-        
+
         $this->assertEquals(5, strlen($result));
         $this->assertEquals('     ', $result);
     }
@@ -20,7 +20,7 @@ class LineFormatterTest extends TestCase
     {
         $line = 'Hello World!';
         $result = LineFormatter::padding($line, 5);
-        
+
         $this->assertEquals('', $result);
     }
 
@@ -28,7 +28,7 @@ class LineFormatterTest extends TestCase
     {
         $line = 'Test';
         $result = LineFormatter::pad($line, 10);
-        
+
         $this->assertEquals(10, strlen(strip_tags($result)));
     }
 
@@ -36,7 +36,7 @@ class LineFormatterTest extends TestCase
     {
         $message = 'Test';
         $result = LineFormatter::center($message, 12);
-        
+
         $this->assertEquals(12, strlen($result));
         $this->assertStringContainsString('Test', $result);
     }
@@ -45,7 +45,7 @@ class LineFormatterTest extends TestCase
     {
         $path = '/var/www/app.php';
         $result = LineFormatter::highlightPath($path);
-        
+
         $this->assertStringContainsString('app.php', $result);
         $this->assertStringContainsString('<fg=', $result);
 
@@ -59,14 +59,14 @@ class LineFormatterTest extends TestCase
     {
         // Single-byte characters
         $this->assertEquals(5, LineFormatter::visualLength('Hello'));
-        
+
         // Multi-byte emoji characters (should count as 1 each)
         $this->assertEquals(1, LineFormatter::visualLength('✓'));
         $this->assertEquals(1, LineFormatter::visualLength('✗'));
         $this->assertEquals(1, LineFormatter::visualLength('⚠'));
         $this->assertEquals(1, LineFormatter::visualLength('ℹ'));
         $this->assertEquals(1, LineFormatter::visualLength('🎉'));
-        
+
         // Mixed text and emoji
         $this->assertEquals(6, LineFormatter::visualLength('✓ Done'));
         $this->assertEquals(13, LineFormatter::visualLength('✓ Step 1 done'));
@@ -77,7 +77,7 @@ class LineFormatterTest extends TestCase
         // With ANSI color codes
         $colored = '<fg=green>Hello</fg=green>';
         $this->assertEquals(5, LineFormatter::visualLength($colored));
-        
+
         // With ANSI escape sequences
         $ansi = "\x1b[32mHello\x1b[0m";
         $this->assertEquals(5, LineFormatter::visualLength($ansi));
@@ -87,7 +87,7 @@ class LineFormatterTest extends TestCase
     {
         $line = '✓ Success';
         $result = LineFormatter::padding($line, 15);
-        
+
         // Should pad to the remaining visual characters
         $expectedPadding = 15 - LineFormatter::visualLength($line);
         $this->assertEquals($expectedPadding, strlen($result));
@@ -98,10 +98,9 @@ class LineFormatterTest extends TestCase
     {
         $message = '✓ Done';
         $result = LineFormatter::center($message, 20);
-        
+
         // Should be centered within 20 characters
         $this->assertEquals(20, LineFormatter::visualLength($result));
         $this->assertStringContainsString('✓ Done', $result);
     }
 }
-

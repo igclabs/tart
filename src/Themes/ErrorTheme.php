@@ -14,4 +14,3 @@ class ErrorTheme extends Theme
         );
     }
 }
-

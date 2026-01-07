@@ -26,7 +26,8 @@ interface ThemeInterface
 
     /**
      * Get all theme colors.
+     *
+     * @return array<string>
      */
     public function getColors(): array;
 }
-

@@ -7,9 +7,9 @@ class AsciiArt
     /**
      * Create a logo with automatic header and footer decoration.
      *
-     * @param array $lines Array of text lines for the logo
-     * @param array $options Configuration options
-     * @return array Array of formatted lines ready for output
+     * @param array<string> $lines Array of text lines for the logo
+     * @param array<string, mixed> $options Configuration options
+     * @return array<string> Array of formatted lines ready for output
      */
     public static function createLogo(array $lines, array $options = []): array
     {
@@ -64,6 +64,9 @@ class AsciiArt
 
     /**
      * Generate random colored block lines for decoration.
+     *
+     * @param array<string> $colors
+     * @return array<string>
      */
     protected static function generateColorBlocks(int $lines, int $blocksPerLine, array $colors): array
     {
@@ -96,7 +99,7 @@ class AsciiArt
     {
         $visualLength = LineFormatter::visualLength($line);
         $padding = max(0, $width - $visualLength);
-        
+
         return '<igc>' . $line . str_repeat(' ', $padding) . '</igc>';
     }
 
@@ -104,8 +107,8 @@ class AsciiArt
      * Create a simple text logo with automatic styling.
      *
      * @param string $text The text to display
-     * @param array $options Configuration options
-     * @return array Array of formatted lines
+     * @param array<string, mixed> $options Configuration options
+     * @return array<string> Array of formatted lines
      */
     public static function createTextLogo(string $text, array $options = []): array
     {
@@ -137,6 +140,9 @@ class AsciiArt
 
     /**
      * Create a standard text logo (just the text with decoration).
+     *
+     * @param array<string, mixed> $config
+     * @return array<string>
      */
     protected static function createStandardTextLogo(string $text, array $config): array
     {
@@ -148,12 +154,15 @@ class AsciiArt
 
     /**
      * Create a boxed text logo.
+     *
+     * @param array<string, mixed> $config
+     * @return array<string>
      */
     protected static function createBoxedTextLogo(string $text, array $config): array
     {
         $textLength = mb_strlen($text, 'UTF-8');
         $boxWidth = $textLength + 4; // 2 spaces padding on each side
-        
+
         $topLine = '╔' . str_repeat('═', $boxWidth) . '╗';
         $textLine = '║  ' . "<options=bold><fg={$config['text_color']}>{$text}</fg={$config['text_color']}></options=bold>" . '  ║';
         $bottomLine = '╚' . str_repeat('═', $boxWidth) . '╝';
@@ -167,6 +176,9 @@ class AsciiArt
 
     /**
      * Create a banner style text logo.
+     *
+     * @param array<string, mixed> $config
+     * @return array<string>
      */
     protected static function createBannerTextLogo(string $text, array $config): array
     {
@@ -196,13 +208,13 @@ class AsciiArt
      * Create a multi-line ASCII art logo.
      *
      * @param string $asciiArt Multi-line ASCII art string
-     * @param array $options Configuration options
-     * @return array Array of formatted lines
+     * @param array<string, mixed> $options Configuration options
+     * @return array<string> Array of formatted lines
      */
     public static function createMultiLineLogo(string $asciiArt, array $options = []): array
     {
         $lines = explode("\n", $asciiArt);
-        
+
         $defaults = [
             'colors' => ['red', 'green', 'yellow', 'cyan', 'white'],
             'width' => 80,
@@ -216,7 +228,7 @@ class AsciiArt
         $config = array_merge($defaults, $options);
 
         // Process each line
-        $processedLines = array_map(function($line) use ($config) {
+        $processedLines = array_map(function ($line) use ($config) {
             return self::padLine($line, $config['width']);
         }, $lines);
 
@@ -227,10 +239,10 @@ class AsciiArt
      * Create a gradient color block decoration.
      *
      * @param int $lines Number of lines
-     * @param array $colors Colors to use
-     * @return array Array of formatted lines
+     * @param array<string>|null $colors Colors to use
+     * @return array<string> Array of formatted lines
      */
-    public static function createGradientBlocks(int $lines, array $colors = null): array
+    public static function createGradientBlocks(int $lines, ?array $colors = null): array
     {
         if ($colors === null) {
             $colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta'];
@@ -260,7 +272,7 @@ class AsciiArt
      * @param string $pattern Pattern character(s)
      * @param string $color Color for the pattern
      * @param int $width Width of the line
-     * @return array Array of formatted lines
+     * @return array<string> Array of formatted lines
      */
     public static function createPatternDecoration(
         int $lines,
@@ -269,13 +281,13 @@ class AsciiArt
         int $width = 80
     ): array {
         $output = [];
-        
+
         for ($i = 0; $i < $lines; $i++) {
             $patternLength = mb_strlen($pattern, 'UTF-8');
             $repetitions = (int) ceil($width / $patternLength);
             $line = str_repeat($pattern, $repetitions);
             $line = mb_substr($line, 0, $width, 'UTF-8');
-            
+
             $output[] = "<fg={$color}>{$line}</fg={$color}>";
         }
 
@@ -284,6 +296,9 @@ class AsciiArt
 
     /**
      * Extract logo options from config array.
+     *
+     * @param array<string, mixed> $config
+     * @return array<string, mixed>
      */
     protected static function logoOptionSlice(array $config): array
     {
@@ -298,4 +313,3 @@ class AsciiArt
         ];
     }
 }
-

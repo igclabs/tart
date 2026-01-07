@@ -27,6 +27,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     use ConfiguresFormatter;
 
     protected ?OutputInterface $currentOutput = null;
+
     /**
      * Set the theme for this command.
      */
@@ -45,7 +46,9 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
         return $this->theme;
     }
 
-
+    /**
+     * @param array<string, mixed> $config
+     */
     public function __construct(?string $name = null, array $config = [])
     {
         parent::__construct($name);
@@ -82,6 +85,8 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
 
     /**
      * Display a custom text logo with automatic decoration.
+     *
+     * @param array<string, mixed> $options
      */
     public function displayTextLogo(string $text, string $style = 'standard', array $options = []): self
     {
@@ -99,6 +104,8 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
 
     /**
      * Display a multi-line ASCII art logo with decoration.
+     *
+     * @param array<string, mixed> $options
      */
     public function displayAsciiLogo(string $asciiArt, array $options = []): self
     {
@@ -115,6 +122,9 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
 
     /**
      * Display custom logo lines with automatic decoration.
+     *
+     * @param array<string> $lines
+     * @param array<string, mixed> $options
      */
     public function displayCustomLogo(array $lines, array $options = []): self
     {
@@ -138,4 +148,3 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
         return $this->currentOutput;
     }
 }
-

@@ -3,8 +3,9 @@
 namespace IGC\Tart\Laravel\Commands;
 
 use IGC\Tart\Laravel\StyledCommand;
-use IGC\Tart\Themes\Theme;
 use IGC\Tart\Themes\DefaultTheme;
+use IGC\Tart\Themes\Theme;
+
 /**
  * TART Fluent API Demo Command
  *
@@ -50,6 +51,7 @@ class TartFluentDemoCommand extends StyledCommand
         $this->demoComplexExample();
 
         $this->footer('Fluent API Demo', 'All examples completed!');
+
         return self::SUCCESS;
     }
 
@@ -58,7 +60,7 @@ class TartFluentDemoCommand extends StyledCommand
      */
     protected function demoFluentThemes(): void
     {
-        
+
 
         // Create a custom theme fluently
         $customTheme = Theme::make('magenta')
@@ -85,7 +87,7 @@ class TartFluentDemoCommand extends StyledCommand
 
         $this->footer('Fluent Theme Creation', 'All themes created!');
 
-        $this->setTheme(new DefaultTheme());        
+        $this->setTheme(new DefaultTheme());
     }
 
     /**
@@ -173,12 +175,12 @@ ASCII;
      * Demonstrate a complex real-world example.
      */
     protected function demoComplexExample(): void
-    {     
+    {
 
         // Create a deployment theme
         $deployTheme = Theme::make('white')
             ->withTextColor('black')
-            ->withHighlightColor('bright-yellow');        
+            ->withHighlightColor('bright-yellow');
 
         // Set the theme and show deployment header
         $this->setTheme($deployTheme)
@@ -197,7 +199,7 @@ ASCII;
             'Building application' => 'success',
             'Running tests' => 'success',
             'Deploying to staging' => 'warning',
-            'Running migrations' => 'success',
+            'Running migrations' => 'error',
             'Clearing cache' => 'success',
         ];
 
@@ -211,14 +213,12 @@ ASCII;
                 'success' => '✓',
                 'warning' => '⚠',
                 'error' => '✗',
-                default => '•'
             };
 
             $color = match($type) {
                 'success' => 'green',
                 'warning' => 'yellow',
                 'error' => 'red',
-                default => 'white'
             };
 
             $this->appendLine(" {$icon}", $color);
@@ -233,7 +233,7 @@ ASCII;
             ->boxed()
             ->color('green')
             ->render();
-        
+
         $this->success('Deployment finished successfully!');
         $this->stat('Total deployment time: 2.3 seconds');
     }

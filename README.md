@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/php-%5E8.0-blue" alt="PHP Version">
+  <img src="https://img.shields.io/badge/php-%5E8.2-blue" alt="PHP Version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
   <img src="https://img.shields.io/badge/version-1.1.3-brightgreen" alt="Version">
 </p>

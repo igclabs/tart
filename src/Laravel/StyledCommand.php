@@ -2,7 +2,6 @@
 
 namespace IGC\Tart\Laravel;
 
-use Illuminate\Console\Command;
 use IGC\Tart\Concerns\ConfiguresFormatter;
 use IGC\Tart\Concerns\HasBlocks;
 use IGC\Tart\Concerns\HasColoredOutput;
@@ -13,6 +12,7 @@ use IGC\Tart\Contracts\StyledCommandInterface;
 use IGC\Tart\Contracts\ThemeInterface;
 use IGC\Tart\Support\AsciiArt;
 use IGC\Tart\Support\LogoBuilder;
+use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -33,7 +33,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
 
     /**
      * Confirm a question with the user (styled version).
-     * 
+     *
      * Overrides Laravel's confirm() to add beautiful styling.
      * Signature matches parent for compatibility.
      *
@@ -60,7 +60,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     public function setTheme(ThemeInterface $theme): self
     {
         $this->theme = $theme;
-        
+
         return $this;
     }
 
@@ -100,7 +100,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
 
     /**
      * Display a comprehensive demo of all TART features.
-     * 
+     *
      * This method showcases the most common TART features in a single call.
      * Perfect for testing, demonstrations, and learning what TART can do.
      */
@@ -200,7 +200,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      *
      * @param string $text The text to display
      * @param string $style Style: 'standard', 'box', or 'banner'
-     * @param array $options Additional options
+     * @param array<string, mixed> $options Additional options
      */
     public function displayTextLogo(string $text, string $style = 'standard', array $options = []): self
     {
@@ -220,7 +220,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      * Display a multi-line ASCII art logo with decoration.
      *
      * @param string $asciiArt Multi-line ASCII art
-     * @param array $options Additional options
+     * @param array<string, mixed> $options Additional options
      */
     public function displayAsciiLogo(string $asciiArt, array $options = []): self
     {
@@ -238,8 +238,8 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     /**
      * Display custom logo lines with automatic decoration.
      *
-     * @param array $lines Array of logo lines
-     * @param array $options Configuration options
+     * @param array<string> $lines Array of logo lines
+     * @param array<string, mixed> $options Configuration options
      */
     public function displayCustomLogo(array $lines, array $options = []): self
     {
@@ -253,7 +253,4 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
 
         return $this;
     }
-
 }
-
-

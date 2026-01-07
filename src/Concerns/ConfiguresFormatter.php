@@ -23,4 +23,3 @@ trait ConfiguresFormatter
         $output->setFormatter($formatter);
     }
 }
-

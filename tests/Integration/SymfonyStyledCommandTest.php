@@ -16,8 +16,7 @@ class SymfonyStyledCommandTest extends TestCase
     {
         $application = new Application();
 
-        $command = new class('symfony:tart-demo') extends SymfonyStyledCommand {
-
+        $command = new class ('symfony:tart-demo') extends SymfonyStyledCommand {
             protected function execute(InputInterface $input, OutputInterface $output): int
             {
                 $this->say('Hello Symfony');
@@ -36,4 +35,3 @@ class SymfonyStyledCommandTest extends TestCase
         $this->assertStringContainsString('Hello Symfony', $tester->getDisplay());
     }
 }
-

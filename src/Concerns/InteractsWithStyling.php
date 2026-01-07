@@ -9,8 +9,12 @@ use IGC\Tart\Themes\Theme;
 trait InteractsWithStyling
 {
     protected ThemeInterface $theme;
+    /** @var array<string, mixed> */
     protected array $tartConfig = [];
 
+    /**
+     * @param array<string, mixed> $overrides
+     */
     protected function bootStyling(array $overrides = []): void
     {
         $baseConfig = $this->resolveTartConfig();
@@ -21,6 +25,8 @@ trait InteractsWithStyling
 
     /**
      * Load the package configuration when available.
+     *
+     * @return array<string, mixed>
      */
     protected function resolveTartConfig(): array
     {
@@ -83,6 +89,9 @@ trait InteractsWithStyling
 
     /**
      * Resolve logo decoration options merged with overrides.
+     *
+     * @param array<string, mixed> $overrides
+     * @return array<string, mixed>
      */
     protected function logoOptions(array $overrides = []): array
     {
@@ -100,4 +109,3 @@ trait InteractsWithStyling
         return array_merge($defaults, $overrides);
     }
 }
-

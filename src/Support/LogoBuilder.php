@@ -11,9 +11,11 @@ use IGC\Tart\Contracts\ThemeInterface;
  */
 class LogoBuilder
 {
+    /** @var array<string, mixed> */
     protected array $options = [];
     protected string $text = '';
     protected string $asciiArt = '';
+    /** @var array<string> */
     protected array $lines = [];
     protected string $type = 'text'; // 'text', 'ascii', 'custom'
 
@@ -36,7 +38,7 @@ class LogoBuilder
      */
     public static function make(?ThemeInterface $theme = null): self
     {
-        return new static($theme);
+        return new self($theme);
     }
 
     /**
@@ -46,6 +48,7 @@ class LogoBuilder
     {
         $this->text = $text;
         $this->type = 'text';
+
         return $this;
     }
 
@@ -56,16 +59,20 @@ class LogoBuilder
     {
         $this->asciiArt = $asciiArt;
         $this->type = 'ascii';
+
         return $this;
     }
 
     /**
      * Set custom logo lines.
+     *
+     * @param array<string> $lines
      */
     public function lines(array $lines): self
     {
         $this->lines = $lines;
         $this->type = 'custom';
+
         return $this;
     }
 
@@ -75,6 +82,7 @@ class LogoBuilder
     public function style(string $style): self
     {
         $this->options['style'] = $style;
+
         return $this;
     }
 
@@ -100,15 +108,19 @@ class LogoBuilder
     public function color(string $color): self
     {
         $this->options['text_color'] = $color;
+
         return $this;
     }
 
     /**
      * Set the color palette for decorations.
+     *
+     * @param array<string> $colors
      */
     public function colors(array $colors): self
     {
         $this->options['colors'] = $colors;
+
         return $this;
     }
 
@@ -118,6 +130,7 @@ class LogoBuilder
     public function width(int $width): self
     {
         $this->options['width'] = $width;
+
         return $this;
     }
 
@@ -127,6 +140,7 @@ class LogoBuilder
     public function headerLines(int $lines): self
     {
         $this->options['header_lines'] = $lines;
+
         return $this;
     }
 
@@ -136,6 +150,7 @@ class LogoBuilder
     public function footerLines(int $lines): self
     {
         $this->options['footer_lines'] = $lines;
+
         return $this;
     }
 
@@ -145,6 +160,7 @@ class LogoBuilder
     public function paddingTop(int $padding): self
     {
         $this->options['padding_top'] = $padding;
+
         return $this;
     }
 
@@ -154,6 +170,7 @@ class LogoBuilder
     public function paddingBottom(int $padding): self
     {
         $this->options['padding_bottom'] = $padding;
+
         return $this;
     }
 
@@ -163,6 +180,7 @@ class LogoBuilder
     public function blocksPerLine(int $blocks): self
     {
         $this->options['blocks_per_line'] = $blocks;
+
         return $this;
     }
 
@@ -172,6 +190,7 @@ class LogoBuilder
     public function withoutHeader(): self
     {
         $this->options['header_lines'] = 0;
+
         return $this;
     }
 
@@ -181,6 +200,7 @@ class LogoBuilder
     public function withoutFooter(): self
     {
         $this->options['footer_lines'] = 0;
+
         return $this;
     }
 
@@ -191,11 +211,14 @@ class LogoBuilder
     {
         $this->options['padding_top'] = 0;
         $this->options['padding_bottom'] = 0;
+
         return $this;
     }
 
     /**
      * Build and return the logo lines.
+     *
+     * @return array<string>
      */
     public function build(): array
     {
@@ -209,6 +232,8 @@ class LogoBuilder
     /**
      * Render the logo directly to output lines.
      * This is a convenience method for immediate rendering.
+     *
+     * @return array<string>
      */
     public function render(): array
     {
@@ -217,6 +242,8 @@ class LogoBuilder
 
     /**
      * Get the current configuration options.
+     *
+     * @return array<string, mixed>
      */
     public function getOptions(): array
     {

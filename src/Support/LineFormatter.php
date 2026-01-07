@@ -13,7 +13,7 @@ class LineFormatter
         // Strip ANSI color codes
         $stripped = strip_tags($string);
         $stripped = preg_replace('/\x1b\[[0-9;]*m/', '', $stripped);
-        
+
         // Use mb_strlen for proper multi-byte character counting
         return mb_strlen($stripped, 'UTF-8');
     }
@@ -25,7 +25,7 @@ class LineFormatter
     {
         $line .= self::padding($line, $max);
         $length = self::visualLength($line);
-        
+
         if ($length > $max) {
             $line = mb_substr($line, 0, $max, 'UTF-8');
         }
@@ -67,6 +67,12 @@ class LineFormatter
     public static function highlightPath(string $path): string
     {
         $tokens = preg_split('/(\/|\\\\)/', $path, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+
+        // Handle preg_split failure
+        if ($tokens === false) {
+            return $path;
+        }
+
         $segments = array_values(array_filter($tokens, fn ($token) => $token !== '/' && $token !== '\\'));
         $totalSegments = count($segments);
         $segmentIndex = 0;
@@ -75,6 +81,7 @@ class LineFormatter
         foreach ($tokens as $token) {
             if ($token === '/' || $token === '\\') {
                 $output .= "<fg=yellow>{$token}</fg=yellow>";
+
                 continue;
             }
 
@@ -86,4 +93,3 @@ class LineFormatter
         return $output;
     }
 }
-

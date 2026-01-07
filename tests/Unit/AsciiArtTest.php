@@ -66,4 +66,3 @@ ASCII;
         $this->assertStringContainsString('<bg=cyan>  </bg=cyan><bg=cyan>  </bg=cyan>', $lines[0]);
     }
 }
-

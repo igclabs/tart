@@ -19,4 +19,3 @@ class TartServiceProviderTest extends TestCase
         $this->artisan('tart:demo')->assertExitCode(0);
     }
 }
-

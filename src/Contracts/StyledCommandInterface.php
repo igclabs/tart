@@ -44,4 +44,3 @@ interface StyledCommandInterface
      */
     public function bad(string $message): void;
 }
-
