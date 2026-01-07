@@ -2408,7 +2408,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php' => 
   array (
-    'fileHash' => 'aebaf58ae2bbc587ac5a5dc21582fbe04377f623',
+    'fileHash' => 'da6a9eba020cbe16a1853350ad10b690cbaa600a',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
@@ -2416,7 +2416,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php' => 
   array (
-    'fileHash' => 'c4c9a8c8a011a99d425995788026c0dfac06ed87',
+    'fileHash' => '444a8b598cec689dcdcc72c8a6832d00f328d3c4',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
@@ -2510,9 +2510,11 @@ return [
     'fileHash' => '482ed6644a90ccbcb8684f2a4618a2f85418900a',
     'dependentFiles' => 
     array (
-      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
-      1 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      2 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartNewFeaturesDemo.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Support/Spinner.php' => 
@@ -2563,8 +2565,7 @@ return [
     'fileHash' => '990479ff8663f2df4b9f1ce6e6a89d14fcc5125e',
     'dependentFiles' => 
     array (
-      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
-      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
     ),
   ),
   '/home/joe/www/labs/tart/tart/src/Themes/Theme.php' => 
@@ -2572,14 +2573,13 @@ return [
     'fileHash' => 'd40ab3316b9593125e74ab840095db0c88e9e646',
     'dependentFiles' => 
     array (
-      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
-      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
-      2 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
-      3 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
-      4 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
-      5 => '/home/joe/www/labs/tart/tart/src/Themes/DefaultTheme.php',
-      6 => '/home/joe/www/labs/tart/tart/src/Themes/ErrorTheme.php',
-      7 => '/home/joe/www/labs/tart/tart/src/Themes/SuccessTheme.php',
+      0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php',
+      1 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartFluentDemoCommand.php',
+      2 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
+      3 => '/home/joe/www/labs/tart/tart/src/Symfony/StyledCommand.php',
+      4 => '/home/joe/www/labs/tart/tart/src/Themes/DefaultTheme.php',
+      5 => '/home/joe/www/labs/tart/tart/src/Themes/ErrorTheme.php',
+      6 => '/home/joe/www/labs/tart/tart/src/Themes/SuccessTheme.php',
     ),
   ),
 ),
@@ -5844,7 +5844,6 @@ return [
              'uses' => 
             array (
               'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
-              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
             ),
              'constUses' => 
             array (
@@ -5876,7 +5875,6 @@ return [
              'uses' => 
             array (
               'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
-              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
             ),
              'constUses' => 
             array (
@@ -5903,7 +5901,6 @@ return [
              'uses' => 
             array (
               'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
-              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
             ),
              'constUses' => 
             array (
@@ -5925,6 +5922,96 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoBasicOutput',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoLists',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoTables',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoProgressIndicators',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoBlocks',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'narrate',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
@@ -5935,7 +6022,6 @@ return [
              'uses' => 
             array (
               'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
-              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
             ),
              'constUses' => 
             array (
@@ -5966,7 +6052,7 @@ return [
           array (
           ),
         )),
-        4 => 
+        9 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'logoWidth',
            'phpDoc' => 
@@ -5978,7 +6064,6 @@ return [
              'uses' => 
             array (
               'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
-              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
             ),
              'constUses' => 
             array (
@@ -6275,6 +6360,105 @@ return [
         )),
         7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoLists',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Demonstrate lists.
+     */',
+             'namespace' => 'IGC\\Tart\\Laravel\\Commands',
+             'uses' => 
+            array (
+              'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
+              'errortheme' => 'IGC\\Tart\\Themes\\ErrorTheme',
+              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoTables',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Demonstrate tables.
+     */',
+             'namespace' => 'IGC\\Tart\\Laravel\\Commands',
+             'uses' => 
+            array (
+              'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
+              'errortheme' => 'IGC\\Tart\\Themes\\ErrorTheme',
+              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoProgressBars',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Demonstrate progress bars.
+     */',
+             'namespace' => 'IGC\\Tart\\Laravel\\Commands',
+             'uses' => 
+            array (
+              'styledcommand' => 'IGC\\Tart\\Laravel\\StyledCommand',
+              'errortheme' => 'IGC\\Tart\\Themes\\ErrorTheme',
+              'successtheme' => 'IGC\\Tart\\Themes\\SuccessTheme',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'demoLineBuilding',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
@@ -6306,7 +6490,7 @@ return [
           array (
           ),
         )),
-        8 => 
+        11 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'demoPathHighlighting',
            'phpDoc' => 
@@ -6339,7 +6523,7 @@ return [
           array (
           ),
         )),
-        9 => 
+        12 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'demoVisualElements',
            'phpDoc' => 
@@ -6372,7 +6556,7 @@ return [
           array (
           ),
         )),
-        10 => 
+        13 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'demoInteractivity',
            'phpDoc' => 
@@ -6407,7 +6591,7 @@ return [
           array (
           ),
         )),
-        11 => 
+        14 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'demoTextStyles',
            'phpDoc' => 

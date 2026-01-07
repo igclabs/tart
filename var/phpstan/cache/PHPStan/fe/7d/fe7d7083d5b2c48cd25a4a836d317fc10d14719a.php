@@ -155,7 +155,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php' => 
     array (
-      0 => 'aebaf58ae2bbc587ac5a5dc21582fbe04377f623',
+      0 => 'da6a9eba020cbe16a1853350ad10b690cbaa600a',
       1 => 
       array (
         0 => 'igc\\tart\\laravel\\commands\\tartdemocommand',
@@ -163,8 +163,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'igc\\tart\\laravel\\commands\\handle',
-        1 => 'igc\\tart\\laravel\\commands\\narrate',
-        2 => 'igc\\tart\\laravel\\commands\\logowidth',
+        1 => 'igc\\tart\\laravel\\commands\\demobasicoutput',
+        2 => 'igc\\tart\\laravel\\commands\\demolists',
+        3 => 'igc\\tart\\laravel\\commands\\demotables',
+        4 => 'igc\\tart\\laravel\\commands\\demoprogressindicators',
+        5 => 'igc\\tart\\laravel\\commands\\demoblocks',
+        6 => 'igc\\tart\\laravel\\commands\\narrate',
+        7 => 'igc\\tart\\laravel\\commands\\logowidth',
       ),
       3 => 
       array (
@@ -187,7 +192,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoFullCommand.php' => 
     array (
-      0 => 'c4c9a8c8a011a99d425995788026c0dfac06ed87',
+      0 => '444a8b598cec689dcdcc72c8a6832d00f328d3c4',
       1 => 
       array (
         0 => 'igc\\tart\\laravel\\commands\\tartdemofullcommand',
@@ -199,11 +204,14 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         2 => 'igc\\tart\\laravel\\commands\\demologos',
         3 => 'igc\\tart\\laravel\\commands\\demobasicoutput',
         4 => 'igc\\tart\\laravel\\commands\\demoblockmessages',
-        5 => 'igc\\tart\\laravel\\commands\\demolinebuilding',
-        6 => 'igc\\tart\\laravel\\commands\\demopathhighlighting',
-        7 => 'igc\\tart\\laravel\\commands\\demovisualelements',
-        8 => 'igc\\tart\\laravel\\commands\\demointeractivity',
-        9 => 'igc\\tart\\laravel\\commands\\demotextstyles',
+        5 => 'igc\\tart\\laravel\\commands\\demolists',
+        6 => 'igc\\tart\\laravel\\commands\\demotables',
+        7 => 'igc\\tart\\laravel\\commands\\demoprogressbars',
+        8 => 'igc\\tart\\laravel\\commands\\demolinebuilding',
+        9 => 'igc\\tart\\laravel\\commands\\demopathhighlighting',
+        10 => 'igc\\tart\\laravel\\commands\\demovisualelements',
+        11 => 'igc\\tart\\laravel\\commands\\demointeractivity',
+        12 => 'igc\\tart\\laravel\\commands\\demotextstyles',
       ),
       3 => 
       array (

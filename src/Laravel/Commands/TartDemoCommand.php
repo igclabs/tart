@@ -3,7 +3,6 @@
 namespace IGC\Tart\Laravel\Commands;
 
 use IGC\Tart\Laravel\StyledCommand;
-use IGC\Tart\Themes\SuccessTheme;
 
 class TartDemoCommand extends StyledCommand
 {
@@ -26,93 +25,114 @@ class TartDemoCommand extends StyledCommand
      */
     public function handle(): int
     {
-        $originalTheme = $this->getTheme();
-
         $this->logoBlock();
-        $this->header('TART Demo Guide');
 
-        $this->narrate('Welcome! This self-documenting tour walks through the typography, spacing, and theming helpers that ship with TART.');
-        $this->narrate('Every line you see is produced by a helper method so you can copy/paste the snippets straight into your own commands.');
+        $this->header('TART Feature Showcase');
+
+        $this->say('Welcome to TART - Terminal Art for Artisan!');
         $this->br();
 
-        $this->title('Typography Basics');
-        $this->narrate('Use say() for neutral narrative text like this paragraph.');
-        $this->good('good() highlights wins or completed work.');
-        $this->state('state() is perfect for heads-up display style updates.');
-        $this->bad('bad() keeps failures loud and impossible to miss.');
-        $this->cool('cool() adds an informational cyan tone for helpful hints.');
-        $this->br();
+        $this->demoBasicOutput();
+        $this->demoLists();
+        $this->demoTables();
+        $this->demoProgressIndicators();
+        $this->demoBlocks();
 
-        $this->title('Layout & Rhythm');
-        $this->narrate('br() inserts blank lines. Call br(2) for extra breathing room, and hr() when you want a clean divider:');
-        $this->br();
-        $this->hr();
-        $this->br();
-        $this->narrate('Use these helpers whenever you need to give the eye a break.');
-        $this->br(2);
-
-        $this->title('Line Building & Columns');
-        $this->narrate('openLine(), appendLine(), and closeLine() let you narrate progress inline:');
-        $this->openLine('Download Assets');
-        $this->appendLine(' ...', 'yellow');
-        $this->appendLine(' Done', 'green');
-        $this->closeLine();
-
-        $this->openLine('Compile Frontend');
-        $this->appendLine(' ...', 'yellow');
-        $this->appendLine(' Done', 'green');
-        $this->closeLine();
-        $this->br();
-
-        $this->narrate('Need structured columns? addColumn() pads everything for you:');
-        $this->openLine('Module');
-        $this->addColumn('Status', 15, 'yellow');
-        $this->addColumn('Duration', 15, 'cyan');
-        $this->closeLine();
-        $this->openLine('Auth');
-        $this->addColumn('Healthy', 15, 'green');
-        $this->addColumn('213ms', 15, 'cyan');
-        $this->closeLine();
-        $this->openLine('Billing');
-        $this->addColumn('Investigate', 15, 'yellow');
-        $this->addColumn('1.4s', 15, 'cyan');
-        $this->closeLine();
-        $this->br();
-
-        $this->title('Path Highlighting');
-        $this->narrate('PathHighlight() keeps file references readable even inside dense logs:');
-        $this->say($this->pathHighlight('/var/www/html/app/Console/Commands/TartDemoCommand.php'));
-        $this->br();
-
-        $this->title('Theme Switching & Logos');
-        $this->narrate('Calling setTheme() lets different moments in your workflow adopt their own palettes.');
-        $this->setTheme(new SuccessTheme());
-        $this->success('SuccessTheme engaged — perfect for celebratory summaries.');
-        $logoWidth = $this->logoWidth();
-        $this->displayTextLogo('SUCCESS MODE', 'box', [
-            'text_color' => 'green',
-            'width' => $logoWidth,
-        ]);
-        $this->displayTextLogo('TYPOGRAPHY MATTERS', 'banner', [
-            'text_color' => 'cyan',
-            'width' => $logoWidth,
-        ]);
-        $this->setTheme($originalTheme);
-        $this->br();
-
-        $this->title('Block Messages Recap');
-        $this->success('success() wraps paragraphs in vivid green blocks.');
-        $this->warning('warning() grabs attention for risky operations.');
-        $this->notice('notice() shines a cyan spotlight on FYIs.');
-        $this->failure('failure() keeps post-mortems readable.');
-        $this->br();
-
-        $this->narrate('Each of these sections came straight from the methods documented in docs/guides/QUICK-REFERENCE.md — run `php artisan vendor:publish --tag=tart-config` to tune the theme defaults for your team.');
-
-        $this->br();
-        $this->footer('Demo', 'Walkthrough complete');
+        $this->footer('Demo Complete', 'Time: 3.2s');
 
         return self::SUCCESS;
+    }
+
+    protected function demoBasicOutput(): void
+    {
+        $this->title('Basic Output');
+
+        $this->say('Regular text output');
+        $this->good('✓ Success message');
+        $this->state('⚠ Status message');
+        $this->cool('ℹ Info message');
+        $this->bad('✗ Error message');
+
+        $this->br();
+    }
+
+    protected function demoLists(): void
+    {
+        $this->title('Lists');
+
+        $this->say('Bullet list:');
+        $this->bulletList([
+            'Feature-rich CLI toolkit',
+            'Multiple output styles',
+            'Interactive components',
+        ]);
+
+        $this->br();
+
+        $this->say('Task checklist:');
+        $this->taskList([
+            '✓ Text styling',
+            '✓ Progress tracking',
+            '✓ Interactive input',
+        ]);
+
+        $this->br();
+    }
+
+    protected function demoTables(): void
+    {
+        $this->title('Tables');
+
+        $this->renderTable(
+            ['Component', 'Status', 'Version'],
+            [
+                ['Core', 'Active', '1.1.3'],
+                ['Lists', 'Active', '1.2.0'],
+                ['Tables', 'Active', '1.2.0'],
+                ['Progress', 'Active', '1.2.0'],
+            ]
+        );
+
+        $this->br();
+    }
+
+    protected function demoProgressIndicators(): void
+    {
+        $this->title('Progress Tracking');
+
+        $this->say('Line-by-line progress:');
+        $steps = ['Initialize', 'Process', 'Finalize'];
+
+        foreach ($steps as $step) {
+            $this->openLine($step);
+            usleep(200000);
+            $this->appendLine(' ✓', 'green');
+            $this->closeLine();
+        }
+
+        $this->br();
+
+        $this->say('Progress bar:');
+        $this->progressBar(50, 'Loading', function ($bar) {
+            for ($i = 0; $i < 50; $i += 10) {
+                usleep(100000);
+                $bar->advance(10);
+            }
+        });
+
+        $this->br();
+    }
+
+    protected function demoBlocks(): void
+    {
+        $this->title('Block Messages');
+
+        $this->success('✓ Operation completed successfully!');
+        $this->notice('ℹ This is an informational message');
+        $this->warning('⚠ Please review this warning');
+        $this->stat('📊 Processed 1,234 items in 2.5s');
+
+        $this->br();
     }
 
     /**

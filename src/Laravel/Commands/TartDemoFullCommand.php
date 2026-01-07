@@ -45,6 +45,15 @@ class TartDemoFullCommand extends StyledCommand
         // === BLOCK MESSAGES ===
         $this->demoBlockMessages();
 
+        // === LISTS ===
+        $this->demoLists();
+
+        // === TABLES ===
+        $this->demoTables();
+
+        // === PROGRESS BARS ===
+        $this->demoProgressBars();
+
         // === LINE BUILDING ===
         $this->demoLineBuilding();
 
@@ -128,6 +137,87 @@ class TartDemoFullCommand extends StyledCommand
     }
 
     /**
+     * Demonstrate lists.
+     */
+    protected function demoLists(): void
+    {
+        $this->title('Lists');
+
+        $this->say('Bullet list:');
+        $this->bulletList([
+            'First item',
+            'Second item',
+            'Nested items' => [
+                'Sub-item A',
+                'Sub-item B',
+            ],
+            'Third item',
+        ]);
+
+        $this->br();
+
+        $this->say('Ordered list:');
+        $this->orderedList([
+            'Step one: Initialize',
+            'Step two: Process',
+            'Step three: Complete',
+        ]);
+
+        $this->br();
+
+        $this->say('Task list:');
+        $this->taskList([
+            '✓ Setup complete',
+            '✓ Tests passing',
+            '✗ Deployment failed',
+            '• Documentation pending',
+        ]);
+
+        $this->br();
+    }
+
+    /**
+     * Demonstrate tables.
+     */
+    protected function demoTables(): void
+    {
+        $this->title('Tables');
+
+        $this->say('Service status table:');
+        $this->renderTable(
+            ['Service', 'Status', 'Response Time', 'Uptime'],
+            [
+                ['Database', 'Online', '12ms', '99.99%'],
+                ['API Gateway', 'Online', '45ms', '99.95%'],
+                ['Cache Server', 'Degraded', '120ms', '98.50%'],
+                ['Queue Worker', 'Online', '8ms', '100.00%'],
+            ]
+        );
+
+        $this->br();
+    }
+
+    /**
+     * Demonstrate progress bars.
+     */
+    protected function demoProgressBars(): void
+    {
+        $this->title('Progress Bars');
+
+        $this->say('Processing items with progress bar:');
+        $this->progressBar(100, 'Processing', function ($bar) {
+            for ($i = 0; $i < 100; $i += 20) {
+                usleep(150000);
+                $bar->advance(20);
+            }
+        });
+
+        $this->br();
+        $this->good('✓ Processing complete');
+        $this->br();
+    }
+
+    /**
      * Demonstrate line building (dynamic output).
      */
     protected function demoLineBuilding(): void
@@ -138,9 +228,9 @@ class TartDemoFullCommand extends StyledCommand
 
         foreach ($items as $item) {
             $this->openLine("Processing {$item}");
-            usleep(300000); // Simulate work (0.3 seconds)
+            usleep(300000);
             $this->appendLine('...', 'yellow');
-            usleep(200000); // More work
+            usleep(200000);
             $this->appendLine(' Done!', 'green');
             $this->closeLine();
         }
