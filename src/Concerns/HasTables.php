@@ -12,9 +12,17 @@ trait HasTables
      */
     public function renderTable(array $headers, array $rows = []): void
     {
+        $maxWidth = $this->theme->getMaxLineWidth();
+        $color = $this->theme->getColor();
+
+        $gap = '  ';
+        $this->getOutput()->writeln("<bg={$color}>{$gap}</bg={$color}>");
+
         $table = new Table($this->getOutput());
         $table->setHeaders($headers);
         $table->setRows($rows);
         $table->render();
+
+        $this->getOutput()->writeln("<bg={$color}>{$gap}</bg={$color}>");
     }
 }

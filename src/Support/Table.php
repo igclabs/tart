@@ -105,12 +105,12 @@ class Table
         foreach ($row as $i => $cell) {
             $width = $widths[$i] ?? 0;
             $cellLength = $this->visualLength($cell);
-            $padding = $width - $cellLength;
+            $padding = max(0, $width - $cellLength);
 
             $cells[] = $cell . str_repeat(' ', $padding);
         }
 
-        $line = '│ ' . implode(' │ ', $cells) . ' │';
+        $line = '  │ ' . implode(' │ ', $cells) . ' │  ';
 
         if ($isHeader) {
             $this->output->writeln("<fg=cyan>{$line}</fg=cyan>");
@@ -130,6 +130,6 @@ class Table
             $parts[] = str_repeat('─', $width);
         }
 
-        $this->output->writeln('├─' . implode('─┼─', $parts) . '─┤');
+        $this->output->writeln('  ├─' . implode('─┼─', $parts) . '─┤  ');
     }
 }

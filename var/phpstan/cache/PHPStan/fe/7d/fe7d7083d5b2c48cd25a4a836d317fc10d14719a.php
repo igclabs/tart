@@ -496,7 +496,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Support/ProgressBar.php' => 
     array (
-      0 => '482ed6644a90ccbcb8684f2a4618a2f85418900a',
+      0 => '3d89c6c6391101093e9b98833dd4f36bf91686b7',
       1 => 
       array (
         0 => 'igc\\tart\\support\\progressbar',
@@ -536,7 +536,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Support/Table.php' => 
     array (
-      0 => '105f6780364700e5b0ee261b5904a81347109d3e',
+      0 => 'db3a4f96758942080d709f59d81e78a3f5c00b73',
       1 => 
       array (
         0 => 'igc\\tart\\support\\table',
@@ -629,7 +629,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Concerns/HasProgressBars.php' => 
     array (
-      0 => 'd64535e270646e8f0bb20c762d811e7ecd7c120d',
+      0 => '46fc9c7ce9bbfbcce3c2897dc4891e76a85b2b44',
       1 => 
       array (
         0 => 'igc\\tart\\concerns\\hasprogressbars',
@@ -644,7 +644,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Concerns/HasTables.php' => 
     array (
-      0 => '063abb0c9df1e9f2854072d58f54c6f94816bfae',
+      0 => 'cee00de78675b0a13adcb5cced5f152875e2fe32',
       1 => 
       array (
         0 => 'igc\\tart\\concerns\\hastables',

@@ -39,7 +39,7 @@ class ProgressBar
     {
         $this->current = $this->total;
         $this->render();
-        $this->output->writeln('');
+        $this->output->write("\n");
     }
 
     protected function render(): void
@@ -53,6 +53,6 @@ class ProgressBar
 
         $label = $this->label ? "{$this->label} " : '';
 
-        $this->output->write("\r{$label}[{$bar}] {$percentText} ({$this->current}/{$this->total})");
+        $this->output->write("\r  {$label}[{$bar}] {$percentText} ({$this->current}/{$this->total})  ");
     }
 }

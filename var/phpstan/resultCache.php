@@ -2276,7 +2276,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasProgressBars.php' => 
   array (
-    'fileHash' => 'd64535e270646e8f0bb20c762d811e7ecd7c120d',
+    'fileHash' => '46fc9c7ce9bbfbcce3c2897dc4891e76a85b2b44',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
@@ -2326,7 +2326,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Concerns/HasTables.php' => 
   array (
-    'fileHash' => '063abb0c9df1e9f2854072d58f54c6f94816bfae',
+    'fileHash' => 'cee00de78675b0a13adcb5cced5f152875e2fe32',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
@@ -2507,7 +2507,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Support/ProgressBar.php' => 
   array (
-    'fileHash' => '482ed6644a90ccbcb8684f2a4618a2f85418900a',
+    'fileHash' => '3d89c6c6391101093e9b98833dd4f36bf91686b7',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',
@@ -2528,7 +2528,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Support/Table.php' => 
   array (
-    'fileHash' => '105f6780364700e5b0ee261b5904a81347109d3e',
+    'fileHash' => 'db3a4f96758942080d709f59d81e78a3f5c00b73',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php',
