@@ -2448,7 +2448,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php' => 
   array (
-    'fileHash' => 'f96e17fda5009b174c9e248dc911b42f0a4511fd',
+    'fileHash' => 'e2636691e672a78496512ef248ff835a60c0ad5c',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',

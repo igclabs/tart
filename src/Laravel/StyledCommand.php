@@ -151,7 +151,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     public function tartLogo(): void
     {
         $maxWidth = 80;
-        $logoWidth = 36;
+        $logoWidth = 37;
         $leftPad = (int) floor(($maxWidth - $logoWidth) / 2);
         $rightPad = $maxWidth - $logoWidth - $leftPad;
         
