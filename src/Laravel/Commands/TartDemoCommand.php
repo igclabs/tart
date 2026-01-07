@@ -127,10 +127,10 @@ class TartDemoCommand extends StyledCommand
     {
         $this->title('Block Messages');
 
-        $this->success('✓ Operation completed successfully!');
-        $this->notice('ℹ This is an informational message');
-        $this->warning('⚠ Please review this warning');
-        $this->stat('📊 Processed 1,234 items in 2.5s');
+        $this->success('Operation completed successfully!');
+        $this->notice('This is an informational message');
+        $this->warning('Please review this warning');
+        $this->stat('Processed 1,234 items in 2.5s');
 
         $this->br();
     }
