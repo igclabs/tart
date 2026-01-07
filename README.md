@@ -12,7 +12,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/php-%5E8.2-blue" alt="PHP Version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-  <img src="https://img.shields.io/badge/version-1.1.8-brightgreen" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.1.9-brightgreen" alt="Version">
 </p>
 
 ---
@@ -81,7 +81,7 @@ After requiring the package, you can confirm that Composer resolved the correct 
 ```bash
 composer show igclabs/tart
 # name     : igclabs/tart
-# versions : * 1.1.8
+# versions : * 1.1.9
 ```
 
 ## Quick Start

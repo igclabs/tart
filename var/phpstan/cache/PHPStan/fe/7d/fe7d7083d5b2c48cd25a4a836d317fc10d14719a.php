@@ -496,7 +496,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Support/ProgressBar.php' => 
     array (
-      0 => '3d89c6c6391101093e9b98833dd4f36bf91686b7',
+      0 => '65b1f31fd34e393d132cc7eba65247896466935e',
       1 => 
       array (
         0 => 'igc\\tart\\support\\progressbar',
@@ -504,10 +504,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'igc\\tart\\support\\__construct',
-        1 => 'igc\\tart\\support\\start',
-        2 => 'igc\\tart\\support\\advance',
-        3 => 'igc\\tart\\support\\finish',
-        4 => 'igc\\tart\\support\\render',
+        1 => 'igc\\tart\\support\\setbgcolor',
+        2 => 'igc\\tart\\support\\setmaxlinewidth',
+        3 => 'igc\\tart\\support\\start',
+        4 => 'igc\\tart\\support\\advance',
+        5 => 'igc\\tart\\support\\finish',
+        6 => 'igc\\tart\\support\\render',
+        7 => 'igc\\tart\\support\\wrapline',
       ),
       3 => 
       array (
@@ -536,7 +539,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Support/Table.php' => 
     array (
-      0 => 'db3a4f96758942080d709f59d81e78a3f5c00b73',
+      0 => 'b8dd794029d95c0591a90d600f7d9c6f799f68af',
       1 => 
       array (
         0 => 'igc\\tart\\support\\table',
@@ -544,14 +547,17 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'igc\\tart\\support\\__construct',
-        1 => 'igc\\tart\\support\\setheaders',
-        2 => 'igc\\tart\\support\\addrow',
-        3 => 'igc\\tart\\support\\setrows',
-        4 => 'igc\\tart\\support\\render',
-        5 => 'igc\\tart\\support\\calculatecolumnwidths',
-        6 => 'igc\\tart\\support\\visuallength',
-        7 => 'igc\\tart\\support\\renderrow',
-        8 => 'igc\\tart\\support\\renderseparator',
+        1 => 'igc\\tart\\support\\setbgcolor',
+        2 => 'igc\\tart\\support\\setmaxlinewidth',
+        3 => 'igc\\tart\\support\\setheaders',
+        4 => 'igc\\tart\\support\\addrow',
+        5 => 'igc\\tart\\support\\setrows',
+        6 => 'igc\\tart\\support\\render',
+        7 => 'igc\\tart\\support\\calculatecolumnwidths',
+        8 => 'igc\\tart\\support\\visuallength',
+        9 => 'igc\\tart\\support\\renderrow',
+        10 => 'igc\\tart\\support\\renderseparator',
+        11 => 'igc\\tart\\support\\wrapline',
       ),
       3 => 
       array (
@@ -629,7 +635,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Concerns/HasProgressBars.php' => 
     array (
-      0 => '46fc9c7ce9bbfbcce3c2897dc4891e76a85b2b44',
+      0 => '44674b00b3ddf2de9310ba22d831300ea7ad9bb8',
       1 => 
       array (
         0 => 'igc\\tart\\concerns\\hasprogressbars',
@@ -644,7 +650,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Concerns/HasTables.php' => 
     array (
-      0 => 'cee00de78675b0a13adcb5cced5f152875e2fe32',
+      0 => 'f4a4dab77d6c2706a900b65bb414b5b9dd1c03bf',
       1 => 
       array (
         0 => 'igc\\tart\\concerns\\hastables',

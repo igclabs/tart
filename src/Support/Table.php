@@ -14,10 +14,26 @@ class Table
     /** @var array<string> */
     protected array $align = [];
     protected string $style = 'default';
+    protected ?string $bgColor = null;
+    protected int $maxLineWidth = 72;
 
     public function __construct(OutputInterface $output)
     {
         $this->output = $output;
+    }
+
+    public function setBgColor(?string $color): self
+    {
+        $this->bgColor = $color;
+
+        return $this;
+    }
+
+    public function setMaxLineWidth(int $width): self
+    {
+        $this->maxLineWidth = $width;
+
+        return $this;
     }
 
     /**
@@ -110,7 +126,8 @@ class Table
             $cells[] = $cell . str_repeat(' ', $padding);
         }
 
-        $line = '  │ ' . implode(' │ ', $cells) . ' │  ';
+        $content = '│ ' . implode(' │ ', $cells) . ' │';
+        $line = $this->wrapLine($content);
 
         if ($isHeader) {
             $this->output->writeln("<fg=cyan>{$line}</fg=cyan>");
@@ -130,6 +147,24 @@ class Table
             $parts[] = str_repeat('─', $width);
         }
 
-        $this->output->writeln('  ├─' . implode('─┼─', $parts) . '─┤  ');
+        $content = '├─' . implode('─┼─', $parts) . '─┤';
+        $line = $this->wrapLine($content);
+        $this->output->writeln($line);
+    }
+
+    protected function wrapLine(string $content): string
+    {
+        if ($this->bgColor === null) {
+            return '  ' . $content . '  ';
+        }
+
+        $lineLength = $this->visualLength($content);
+        $paddingNeeded = max(0, $this->maxLineWidth - $lineLength);
+        $rightPadding = str_repeat(' ', $paddingNeeded);
+
+        $gap = '  ';
+        $pad = '  ';
+
+        return "<bg={$this->bgColor}>{$gap}</bg={$this->bgColor}>{$pad}{$content}{$rightPadding}{$pad}<bg={$this->bgColor}>{$gap}</bg={$this->bgColor}>";
     }
 }

@@ -9,18 +9,14 @@ trait HasProgressBars
 {
     public function progressBar(int $total, string $label = '', ?Closure $callback = null): ProgressBar
     {
-        $color = $this->theme->getColor();
-        $gap = '  ';
-
-        $this->getOutput()->write("<bg={$color}>{$gap}</bg={$color}>");
-
         $bar = new ProgressBar($this->getOutput(), $total, $label);
+        $bar->setBgColor($this->theme->getColor());
+        $bar->setMaxLineWidth($this->theme->getMaxLineWidth());
         $bar->start();
 
         if ($callback !== null) {
             $callback($bar);
             $bar->finish();
-            $this->getOutput()->writeln("<bg={$color}>{$gap}</bg={$color}>");
         }
 
         return $bar;

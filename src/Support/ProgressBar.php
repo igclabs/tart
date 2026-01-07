@@ -13,12 +13,28 @@ class ProgressBar
     protected int $barWidth = 40;
     protected string $barChar = '█';
     protected string $emptyChar = '░';
+    protected ?string $bgColor = null;
+    protected int $maxLineWidth = 72;
 
     public function __construct(OutputInterface $output, int $total, string $label = '')
     {
         $this->output = $output;
         $this->total = $total;
         $this->label = $label;
+    }
+
+    public function setBgColor(?string $color): self
+    {
+        $this->bgColor = $color;
+
+        return $this;
+    }
+
+    public function setMaxLineWidth(int $width): self
+    {
+        $this->maxLineWidth = $width;
+
+        return $this;
     }
 
     public function start(): self
@@ -52,7 +68,25 @@ class ProgressBar
         $percentText = sprintf('%3d%%', $percent * 100);
 
         $label = $this->label ? "{$this->label} " : '';
+        $content = "{$label}[{$bar}] {$percentText} ({$this->current}/{$this->total})";
 
-        $this->output->write("\r  {$label}[{$bar}] {$percentText} ({$this->current}/{$this->total})  ");
+        $line = $this->wrapLine($content);
+        $this->output->write("\r{$line}");
+    }
+
+    protected function wrapLine(string $content): string
+    {
+        if ($this->bgColor === null) {
+            return '  ' . $content . '  ';
+        }
+
+        $contentLength = mb_strlen($content, 'UTF-8');
+        $paddingNeeded = max(0, $this->maxLineWidth - $contentLength);
+        $rightPadding = str_repeat(' ', $paddingNeeded);
+
+        $gap = '  ';
+        $pad = '  ';
+
+        return "<bg={$this->bgColor}>{$gap}</bg={$this->bgColor}>{$pad}{$content}{$rightPadding}{$pad}<bg={$this->bgColor}>{$gap}</bg={$this->bgColor}>";
     }
 }
