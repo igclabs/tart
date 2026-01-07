@@ -126,7 +126,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php' => 
     array (
-      0 => 'af28fd0550454e3dd752ecfe4207059a9101a168',
+      0 => '926946ad52731f357a233944525025efce8854be',
       1 => 
       array (
         0 => 'igc\\tart\\laravel\\styledcommand',
@@ -155,7 +155,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php' => 
     array (
-      0 => 'da6a9eba020cbe16a1853350ad10b690cbaa600a',
+      0 => 'ca081e62a53f8e20ce19a757f401e7a5db26af9e',
       1 => 
       array (
         0 => 'igc\\tart\\laravel\\commands\\tartdemocommand',

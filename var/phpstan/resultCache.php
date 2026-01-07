@@ -2408,7 +2408,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php' => 
   array (
-    'fileHash' => 'da6a9eba020cbe16a1853350ad10b690cbaa600a',
+    'fileHash' => 'ca081e62a53f8e20ce19a757f401e7a5db26af9e',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/TartServiceProvider.php',
@@ -2448,7 +2448,7 @@ return [
   ),
   '/home/joe/www/labs/tart/tart/src/Laravel/StyledCommand.php' => 
   array (
-    'fileHash' => 'af28fd0550454e3dd752ecfe4207059a9101a168',
+    'fileHash' => '926946ad52731f357a233944525025efce8854be',
     'dependentFiles' => 
     array (
       0 => '/home/joe/www/labs/tart/tart/src/Laravel/Commands/TartDemoCommand.php',

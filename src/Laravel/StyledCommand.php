@@ -150,17 +150,30 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      */
     public function tartLogo(): void
     {
+        $maxWidth = $this->theme->getMaxLineWidth();
+        $logoWidth = 39;
+        $leftPad = (int) floor(($maxWidth - $logoWidth) / 2);
+        $rightPad = $maxWidth - $logoWidth - $leftPad;
+        
+        $left = str_repeat(' ', $leftPad);
+        $right = str_repeat(' ', $rightPad);
+
         $this->colorBlocks(3);
-        $this->line('<igc>                                                                                </igc>');
-        $this->line('<igc><bg=black;fg=red;options=bold>████████╗</bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold> █████╗ </bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██████╗ </bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>████████╗</bg=black;fg=yellow;options=bold></igc>');
-        $this->line('<igc><bg=black;fg=red;options=bold>╚══██╔══╝</bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>██╔══██╗</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██╔══██╗</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>╚══██╔══╝</bg=black;fg=yellow;options=bold></igc>');
-        $this->line('<igc><bg=black;fg=red;options=bold>   ██║   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>███████║</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██████╔╝</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ██║   </bg=black;fg=yellow;options=bold></igc>');
-        $this->line('<igc><bg=black;fg=red;options=bold>   ██║   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>██╔══██║</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██╔══██╗</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ██║   </bg=black;fg=yellow;options=bold></igc>');
-        $this->line('<igc><bg=black;fg=red;options=bold>   ██║   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>██║  ██║</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██║  ██║</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ██║   </bg=black;fg=yellow;options=bold></igc>');
-        $this->line('<igc><bg=black;fg=red;options=bold>   ╚═╝   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>╚═╝  ╚═╝</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>╚═╝  ╚═╝</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ╚═╝   </bg=black;fg=yellow;options=bold></igc>');
-        $this->line('<igc>                                                                                </igc>');
-        $this->line('<igc><fg=cyan;options=bold>                    Terminal Art for Artisan                     </fg=cyan;options=bold></igc>');
-        $this->line('<igc>                                                                                </igc>');
+        $this->line('<igc>' . str_repeat(' ', $maxWidth) . '</igc>');
+        $this->line('<igc>' . $left . '<bg=black;fg=red;options=bold>████████╗</bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold> █████╗ </bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██████╗ </bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>████████╗</bg=black;fg=yellow;options=bold>' . $right . '</igc>');
+        $this->line('<igc>' . $left . '<bg=black;fg=red;options=bold>╚══██╔══╝</bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>██╔══██╗</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██╔══██╗</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>╚══██╔══╝</bg=black;fg=yellow;options=bold>' . $right . '</igc>');
+        $this->line('<igc>' . $left . '<bg=black;fg=red;options=bold>   ██║   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>███████║</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██████╔╝</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ██║   </bg=black;fg=yellow;options=bold>' . $right . '</igc>');
+        $this->line('<igc>' . $left . '<bg=black;fg=red;options=bold>   ██║   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>██╔══██║</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██╔══██╗</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ██║   </bg=black;fg=yellow;options=bold>' . $right . '</igc>');
+        $this->line('<igc>' . $left . '<bg=black;fg=red;options=bold>   ██║   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>██║  ██║</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>██║  ██║</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ██║   </bg=black;fg=yellow;options=bold>' . $right . '</igc>');
+        $this->line('<igc>' . $left . '<bg=black;fg=red;options=bold>   ╚═╝   </bg=black;fg=red;options=bold> <bg=black;fg=blue;options=bold>╚═╝  ╚═╝</bg=black;fg=blue;options=bold> <bg=black;fg=green;options=bold>╚═╝  ╚═╝</bg=black;fg=green;options=bold> <bg=black;fg=yellow;options=bold>   ╚═╝   </bg=black;fg=yellow;options=bold>' . $right . '</igc>');
+        $this->line('<igc>' . str_repeat(' ', $maxWidth) . '</igc>');
+        
+        $taglineWidth = 24;
+        $taglineLeft = (int) floor(($maxWidth - $taglineWidth) / 2);
+        $taglineRight = $maxWidth - $taglineWidth - $taglineLeft;
+        $this->line('<igc>' . str_repeat(' ', $taglineLeft) . '<fg=cyan;options=bold>Terminal Art for Artisan</fg=cyan;options=bold>' . str_repeat(' ', $taglineRight) . '</igc>');
+        
+        $this->line('<igc>' . str_repeat(' ', $maxWidth) . '</igc>');
         $this->colorBlocks(3);
     }
 
