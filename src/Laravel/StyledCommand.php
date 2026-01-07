@@ -150,7 +150,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
      */
     public function tartLogo(): void
     {
-        $maxWidth = $this->theme->getMaxLineWidth();
+        $maxWidth = 80;
         $logoWidth = 39;
         $leftPad = (int) floor(($maxWidth - $logoWidth) / 2);
         $rightPad = $maxWidth - $logoWidth - $leftPad;
