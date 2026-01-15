@@ -28,9 +28,6 @@ class TartInteractiveDemoCommand extends StyledCommand
             'Development',
         ]);
 
-        $this->good("Environment selected: {$environment}");
-        $this->br();
-
         $features = $this->checkboxMenu('Select TART features to enable', [
             'Spinners',
             'Progress bars',
@@ -39,22 +36,20 @@ class TartInteractiveDemoCommand extends StyledCommand
             'Lists',
         ], ['Spinners', 'Tables']);
 
-        if ($features === []) {
-            $this->notice('No features selected.');
-        } else {
-            $this->good('Selected features: ' . implode(', ', $features));
-        }
-
-        $this->br();
-
         $theme = $this->radioMenu('Choose a theme preset', [
             'Default',
             'Success',
             'Error',
         ]);
 
+        $this->title('Selection Summary');
+        $this->good("Environment selected: {$environment}");
+        if ($features === []) {
+            $this->notice('No features selected.');
+        } else {
+            $this->good('Selected features: ' . implode(', ', $features));
+        }
         $this->success("Theme selected: {$theme}");
-
         $this->br();
         $this->success('Interactive demo complete!');
 
