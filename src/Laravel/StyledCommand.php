@@ -7,6 +7,7 @@ use IGC\Tart\Concerns\HasBlocks;
 use IGC\Tart\Concerns\HasColoredOutput;
 use IGC\Tart\Concerns\HasEnhancedInput;
 use IGC\Tart\Concerns\HasInteractivity;
+use IGC\Tart\Concerns\HasInteractiveMenus;
 use IGC\Tart\Concerns\HasLineBuilding;
 use IGC\Tart\Concerns\HasLists;
 use IGC\Tart\Concerns\HasProgressBars;
@@ -27,6 +28,7 @@ abstract class StyledCommand extends Command implements StyledCommandInterface
     use HasBlocks;
     use HasLineBuilding;
     use HasInteractivity;
+    use HasInteractiveMenus;
     use HasEnhancedInput;
     use HasLists;
     use HasTables;
