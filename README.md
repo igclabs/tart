@@ -173,6 +173,44 @@ new DeployCommand('app:deploy', [
 ]);
 ```
 
+## Theme Configuration
+
+TART ships with a default theme, but you can customize colors, highlight behavior, and layout width. The `max_line_width` setting is especially useful for matching the width of your terminal and for how blocks, progress bars, and banners wrap long text.
+
+### Theme Options
+
+- `class` - The theme class to use (defaults to `IGC\Tart\Themes\Theme`)
+- `color` - Primary color used by blocks and accents (default: `blue`)
+- `text_color` - Default text color inside themed blocks (default: `white`)
+- `highlight_color` - Accent/highlight color (default: `yellow`)
+- `max_line_width` - Maximum line width for formatting (default: `72`)
+- `colors` - Palette used for random or multi-color effects (default: `['red', 'green', 'yellow', 'cyan', 'white']`)
+
+### Example: Custom Theme via Config
+
+```php
+new DeployCommand('app:deploy', [
+    'theme' => [
+        'class' => \IGC\Tart\Themes\Theme::class,
+        'color' => 'magenta',
+        'text_color' => 'white',
+        'highlight_color' => 'yellow',
+        'max_line_width' => 100,
+        'colors' => ['magenta', 'cyan', 'white'],
+    ],
+]);
+```
+
+### Example: Fluent Theme Updates
+
+```php
+$theme = \IGC\Tart\Themes\Theme::make('green')
+    ->withTextColor('white')
+    ->withHighlightColor('yellow')
+    ->withMaxWidth(90)
+    ->withColors(['green', 'cyan', 'white']);
+```
+
 ### Laravel Auto-Discovery & Demo Commands
 
 Laravel 9+ automatically discovers the `IGC\Tart\Laravel\TartServiceProvider`, which registers several Artisan demo commands. After installing the package you can immediately preview different aspects of the styling toolkit:
@@ -196,6 +234,9 @@ php artisan tart:demo-full --theme=error
 
 # Fluent APIs showcase
 php artisan tart:fluent-demo
+
+# Interactive menu demo (menus, checkbox, radio)
+php artisan tart:interactive-demo
 ```
 
 Need manual control? Add TART to Composer's `dont-discover` list and register the provider in `config/app.php`:
@@ -254,6 +295,31 @@ $this->failure('Operation failed');       // Error block
 $this->stat('Completed in 2.5s');        // Stat block
 $this->footer('Process', 'Time: 2.5s');  // Footer
 ```
+
+## Recommended API Usage
+
+TART supports both fluent APIs and the original, traditional methods. The fluent API is the preferred approach going forward because it is more expressive and easier to read. The traditional methods remain supported for backward compatibility.
+
+**Preferred (fluent)**
+
+```php
+$this->logo()
+    ->text('MY APP')
+    ->boxed()
+    ->color('cyan')
+    ->render();
+
+$this->success('Deploy complete!');
+```
+
+**Legacy (still supported)**
+
+```php
+$this->displayTextLogo('MY APP', 'box', ['text_color' => 'cyan']);
+$this->success('Deploy complete!');
+```
+
+If you're migrating existing code, you can adopt fluent methods incrementally while keeping the original APIs for older commands.
 
 ### Logo Creation 🎨
 
