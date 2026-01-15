@@ -17,6 +17,30 @@ $email = $this->prompt('Email?', null, function($value) {
 $password = $this->password('Enter password');
 ```
 
+## 🧭 Interactive Menus (NEW!)
+
+```php
+// Single-select menu
+$choice = $this->menu('Pick a deployment target', [
+    'Staging',
+    'Production',
+]);
+
+// Checkbox menu (multi-select)
+$selected = $this->checkboxMenu('Select features', [
+    'Spinners',
+    'Progress bars',
+    'Tables',
+]);
+
+// Radio menu (single-select)
+$theme = $this->radioMenu('Choose a theme', [
+    'Default',
+    'Success',
+    'Error',
+]);
+```
+
 ## 📝 Lists (NEW!)
 
 ```php
@@ -304,4 +328,3 @@ public function handle()
 ---
 
 **Quick Start:** Extend `StyledCommand` and use any method above!
-

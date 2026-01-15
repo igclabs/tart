@@ -35,6 +35,7 @@ class TartServiceProvider extends ServiceProvider
             Commands\TartFluentDemoCommand::class,
             Commands\TartTestCommand::class,
             Commands\TartNewFeaturesDemo::class,
+            Commands\TartInteractiveDemoCommand::class,
         ]);
     }
 
