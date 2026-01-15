@@ -13,7 +13,7 @@ trait HasInteractiveMenus
      */
     public function menu(string $title, array $items, int $defaultIndex = 0): string
     {
-        $menu = new InteractiveMenu($this->getOutput());
+        $menu = new InteractiveMenu($this->getOutput(), $this->getTheme());
 
         return $menu->select($title, $items, $defaultIndex);
     }
@@ -27,7 +27,7 @@ trait HasInteractiveMenus
      */
     public function checkboxMenu(string $title, array $items, array $defaults = []): array
     {
-        $menu = new InteractiveMenu($this->getOutput());
+        $menu = new InteractiveMenu($this->getOutput(), $this->getTheme());
 
         return $menu->checkbox($title, $items, $defaults);
     }
@@ -39,7 +39,7 @@ trait HasInteractiveMenus
      */
     public function radioMenu(string $title, array $items, int $defaultIndex = 0): string
     {
-        $menu = new InteractiveMenu($this->getOutput());
+        $menu = new InteractiveMenu($this->getOutput(), $this->getTheme());
 
         return $menu->radio($title, $items, $defaultIndex);
     }

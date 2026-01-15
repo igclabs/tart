@@ -19,8 +19,11 @@ class TartInteractiveDemoCommand extends StyledCommand
         }
 
         $this->header('INTERACTIVE MENU DEMO');
+        $this->say('Inputs are now framed to match the TART canvas.');
         $this->say('Use ↑/↓ to move, Space to toggle, Enter to confirm.');
         $this->br();
+
+        $name = $this->prompt('What should we call this run?', 'TART Demo');
 
         $environment = $this->menu('Pick a deployment environment', [
             'Staging',
@@ -43,6 +46,7 @@ class TartInteractiveDemoCommand extends StyledCommand
         ]);
 
         $this->title('Selection Summary');
+        $this->good("Run name: {$name}");
         $this->good("Environment selected: {$environment}");
         if ($features === []) {
             $this->notice('No features selected.');

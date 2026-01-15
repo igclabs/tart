@@ -3,6 +3,7 @@
 namespace IGC\Tart\Concerns;
 
 use Closure;
+use IGC\Tart\Support\FrameRenderer;
 
 trait HasEnhancedInput
 {
@@ -23,12 +24,15 @@ trait HasEnhancedInput
 
         $defaultText = $default ? " [{$default}]" : '';
         $prompt = "<fg=cyan>{$question}{$defaultText}:</fg=cyan> ";
+        $frame = new FrameRenderer($this->getOutput(), $this->getTheme());
 
         while (true) {
-            $this->getOutput()->write($prompt);
-            $answer = trim((string) fgets(STDIN));
+            $frame->writeStart($prompt);
+            $rawAnswer = trim((string) fgets(STDIN));
+            $frame->writeFinish($prompt . $rawAnswer);
 
             // Use default if no answer provided
+            $answer = $rawAnswer;
             if ($answer === '' && $default !== null) {
                 $answer = $default;
             }
@@ -62,7 +66,8 @@ trait HasEnhancedInput
     public function password(string $question): string
     {
         $prompt = "<fg=cyan>{$question}:</fg=cyan> ";
-        $this->getOutput()->write($prompt);
+        $frame = new FrameRenderer($this->getOutput(), $this->getTheme());
+        $frame->writeStart($prompt);
 
         // Disable echo for password input
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
@@ -73,7 +78,7 @@ trait HasEnhancedInput
             $answer = $this->getHiddenInputUnix();
         }
 
-        $this->getOutput()->writeln('');
+        $frame->writeFinish($prompt);
 
         return $answer;
     }
