@@ -234,6 +234,9 @@ php artisan tart:demo-full --theme=error
 
 # Fluent APIs showcase
 php artisan tart:fluent-demo
+
+# Interactive menu demo (menus, checkbox, radio)
+php artisan tart:interactive-demo
 ```
 
 Need manual control? Add TART to Composer's `dont-discover` list and register the provider in `config/app.php`:
