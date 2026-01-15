@@ -2,6 +2,8 @@
 
 namespace IGC\Tart\Support;
 
+use IGC\Tart\Contracts\ThemeInterface;
+use IGC\Tart\Themes\DefaultTheme;
 use RuntimeException;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -9,13 +11,20 @@ class InteractiveMenu
 {
     private OutputInterface $output;
     private TerminalInput $input;
+    private ThemeInterface $theme;
+    private FrameRenderer $frame;
     private string $highlightColor = 'cyan';
     private string $highlightTextColor = 'black';
+    private int $renderedLines = 0;
 
-    public function __construct(OutputInterface $output, ?TerminalInput $input = null)
+    public function __construct(OutputInterface $output, ?ThemeInterface $theme = null, ?TerminalInput $input = null)
     {
         $this->output = $output;
+        $this->theme = $theme ?? new DefaultTheme();
+        $this->frame = new FrameRenderer($output, $this->theme);
         $this->input = $input ?? new TerminalInput();
+        $this->highlightColor = $this->theme->getHighlightColor();
+        $this->highlightTextColor = $this->theme->getTextColor();
     }
 
     public function setHighlightColor(string $color, string $textColor = 'black'): self
@@ -210,11 +219,11 @@ class InteractiveMenu
      */
     private function render(string $title, array $labels, int $index, array $selected, string $mode): void
     {
-        $this->output->write(TerminalControl::clearScreenAndHome());
+        $lines = [];
 
         if ($title !== '') {
-            $this->output->writeln($title);
-            $this->output->writeln('');
+            $lines[] = $this->frame->format($title, 'cyan');
+            $lines[] = $this->frame->format('');
         }
 
         foreach ($labels as $current => $label) {
@@ -222,16 +231,22 @@ class InteractiveMenu
             $line = "{$marker} {$label}";
 
             if ($current === $index) {
-                $line = sprintf(
-                    '<fg=%s;bg=%s>%s</>',
-                    $this->highlightTextColor,
-                    $this->highlightColor,
-                    $line
-                );
+                $lines[] = $this->frame->format($line, $this->highlightTextColor, $this->highlightColor);
+            } else {
+                $lines[] = $this->frame->format($line, $this->theme->getTextColor());
             }
+        }
 
+        if ($this->renderedLines > 0) {
+            $this->output->write(TerminalControl::moveUp($this->renderedLines));
+        }
+
+        foreach ($lines as $line) {
+            $this->output->write(TerminalControl::clearLine());
             $this->output->writeln($line);
         }
+
+        $this->renderedLines = count($lines);
     }
 
     /**

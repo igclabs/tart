@@ -12,7 +12,7 @@ trait HasSelect
      */
     public function select(string $question, array $options, ?string $default = null): ?string
     {
-        $select = new Select($this->getOutput(), $question, $options, $default);
+        $select = new Select($this->getOutput(), $question, $options, $default, $this->getTheme());
 
         return $select->ask();
     }
@@ -24,7 +24,7 @@ trait HasSelect
      */
     public function multiSelect(string $question, array $options, array $defaults = [], int $minRequired = 0): array
     {
-        $multiSelect = new MultiSelect($this->getOutput(), $question, $options, $defaults);
+        $multiSelect = new MultiSelect($this->getOutput(), $question, $options, $defaults, $this->getTheme());
         $multiSelect->setMinRequired($minRequired);
 
         return $multiSelect->ask();
