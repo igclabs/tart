@@ -29,14 +29,26 @@ class TartServiceProvider extends ServiceProvider
             self::CONFIG_PATH => $this->configPath(),
         ], 'tart-config');
 
-        $this->commands([
-            Commands\TartDemoCommand::class,
-            Commands\TartDemoFullCommand::class,
-            Commands\TartFluentDemoCommand::class,
-            Commands\TartTestCommand::class,
-            Commands\TartNewFeaturesDemo::class,
-            Commands\TartInteractiveDemoCommand::class,
-        ]);
+        if ($this->shouldRegisterDemoCommands()) {
+            $this->commands([
+                Commands\TartDemoCommand::class,
+                Commands\TartDemoFullCommand::class,
+                Commands\TartFluentDemoCommand::class,
+                Commands\TartTestCommand::class,
+                Commands\TartNewFeaturesDemo::class,
+                Commands\TartInteractiveDemoCommand::class,
+            ]);
+        }
+    }
+
+    protected function shouldRegisterDemoCommands(): bool
+    {
+        $configured = $this->app['config']->get('tart.register_demo_commands');
+        if ($configured !== null) {
+            return (bool) $configured;
+        }
+
+        return $this->app->environment(['local', 'testing']);
     }
 
     protected function configPath(): string

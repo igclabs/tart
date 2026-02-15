@@ -14,8 +14,19 @@ class TartServiceProviderTest extends TestCase
         ];
     }
 
-    public function test_demo_command_is_available(): void
+    public function test_demo_command_is_available_when_enabled(): void
     {
+        $this->app['config']->set('tart.register_demo_commands', true);
+
         $this->artisan('tart:demo')->assertExitCode(0);
+    }
+
+    public function test_demo_command_is_not_registered_when_disabled(): void
+    {
+        $this->app['config']->set('tart.register_demo_commands', false);
+
+        $this->artisan('tart:demo')
+            ->expectsOutputToContain('Command "tart:demo" is not defined')
+            ->assertExitCode(1);
     }
 }

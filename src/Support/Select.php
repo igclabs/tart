@@ -4,6 +4,7 @@ namespace IGC\Tart\Support;
 
 use IGC\Tart\Contracts\ThemeInterface;
 use IGC\Tart\Themes\DefaultTheme;
+use RuntimeException;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class Select
@@ -56,6 +57,10 @@ class Select
     public function ask(): ?string
     {
         if (empty($this->options)) {
+            if ($this->required) {
+                throw new RuntimeException('Selection is required but no options were provided.');
+            }
+
             return null;
         }
 
@@ -105,42 +110,45 @@ class Select
      */
     protected function readInput(array $keys): ?string
     {
-        $sttyMode = shell_exec('stty -g');
+        $terminal = new TerminalMode();
+        $input = new TerminalInput();
 
-        system('stty -icanon -echo');
+        $terminal->enableRawMode();
 
-        while (true) {
-            $char = fread(STDIN, 3);
+        try {
+            while (true) {
+                $key = $input->readKey();
+                if ($key === null) {
+                    continue;
+                }
 
-            if ($char === "\n") {
-                break;
-            }
-
-            if ($char === "\033") {
-                $arrow = fread(STDIN, 2);
-
-                if ($arrow === '[A') {
+                if ($key->type === KeyPress::UP) {
                     $this->selectedIndex = max(0, $this->selectedIndex - 1);
-                    $this->updateDisplay($keys, array_values($this->options));
-                } elseif ($arrow === '[B') {
+                    $this->updateDisplay(array_values($this->options));
+                    continue;
+                }
+
+                if ($key->type === KeyPress::DOWN) {
                     $this->selectedIndex = min(count($this->options) - 1, $this->selectedIndex + 1);
-                    $this->updateDisplay($keys, array_values($this->options));
+                    $this->updateDisplay(array_values($this->options));
+                    continue;
+                }
+
+                if ($key->type === KeyPress::ENTER || $key->type === KeyPress::ESCAPE) {
+                    break;
                 }
             }
-        }
-
-        if ($sttyMode !== null && $sttyMode !== false) {
-            system("stty {$sttyMode}");
+        } finally {
+            $terminal->restore();
         }
 
         return $keys[$this->selectedIndex] ?? null;
     }
 
     /**
-     * @param array<string> $keys
      * @param array<string> $values
      */
-    protected function updateDisplay(array $keys, array $values): void
+    protected function updateDisplay(array $values): void
     {
         $this->output->write(TerminalControl::moveUp(count($this->options)));
 
