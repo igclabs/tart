@@ -179,7 +179,7 @@ TART ships with a default theme, but you can customize colors, highlight behavio
 
 ### Theme Options
 
-- `class` - The theme class to use (defaults to `IGC\Tart\Themes\Theme`)
+- `class` - The theme class to use (defaults to `IGC\Tart\Themes\DefaultTheme`)
 - `color` - Primary color used by blocks and accents (default: `blue`)
 - `text_color` - Default text color inside themed blocks (default: `white`)
 - `highlight_color` - Accent/highlight color (default: `yellow`)
@@ -263,13 +263,13 @@ Need manual control? Add TART to Composer's `dont-discover` list and register th
 
 #### Publish Configuration
 
-Publish the default configuration to tweak the base theme, logo colors, or auto-answer behavior:
+Publish the default configuration to tweak the base theme, logo colors, auto-answer behavior, and demo-command registration:
 
 ```bash
 php artisan vendor:publish --tag=tart-config
 ```
 
-`config/tart.php` lets you point to a custom `ThemeInterface` implementation or adjust the palette/width used by the bundled `Theme` class.
+`config/tart.php` lets you point to a custom `ThemeInterface` implementation, adjust palette/width used by the bundled `Theme` class, and control `register_demo_commands` (defaults to `false`).
 
 ## 📖 Core Features
 

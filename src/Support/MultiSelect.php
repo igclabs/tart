@@ -117,47 +117,55 @@ class MultiSelect
      */
     protected function readInput(array $keys, array $values): array
     {
-        $sttyMode = shell_exec('stty -g');
+        $terminal = new TerminalMode();
+        $input = new TerminalInput();
 
-        system('stty -icanon -echo');
+        $terminal->enableRawMode();
 
-        while (true) {
-            $char = fread(STDIN, 1);
+        try {
+            while (true) {
+                $keyPress = $input->readKey();
 
-            if ($char === "\n") {
-                if ($this->minRequired > 0 && count($this->selected) < $this->minRequired) {
+                if ($keyPress === null) {
                     continue;
                 }
-                break;
-            }
 
-            if ($char === ' ') {
-                $key = $keys[$this->cursorIndex];
-                $index = array_search($key, $this->selected, true);
+                if ($keyPress->type === KeyPress::ENTER) {
+                    if ($this->minRequired > 0 && count($this->selected) < $this->minRequired) {
+                        continue;
+                    }
 
-                if ($index !== false) {
-                    unset($this->selected[$index]);
-                    $this->selected = array_values($this->selected);
-                } else {
-                    $this->selected[] = $key;
+                    break;
                 }
 
-                $this->updateDisplay($keys, $values);
-            } elseif ($char === "\033") {
-                $arrow = fread(STDIN, 2);
+                if ($keyPress->type === KeyPress::SPACE) {
+                    $key = $keys[$this->cursorIndex];
+                    $index = array_search($key, $this->selected, true);
 
-                if ($arrow === '[A') {
+                    if ($index !== false) {
+                        unset($this->selected[$index]);
+                        $this->selected = array_values($this->selected);
+                    } else {
+                        $this->selected[] = $key;
+                    }
+
+                    $this->updateDisplay($keys, $values);
+                    continue;
+                }
+
+                if ($keyPress->type === KeyPress::UP) {
                     $this->cursorIndex = max(0, $this->cursorIndex - 1);
                     $this->updateDisplay($keys, $values);
-                } elseif ($arrow === '[B') {
+                    continue;
+                }
+
+                if ($keyPress->type === KeyPress::DOWN) {
                     $this->cursorIndex = min(count($this->options) - 1, $this->cursorIndex + 1);
                     $this->updateDisplay($keys, $values);
                 }
             }
-        }
-
-        if ($sttyMode !== null && $sttyMode !== false) {
-            system("stty {$sttyMode}");
+        } finally {
+            $terminal->restore();
         }
 
         return $this->selected;

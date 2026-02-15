@@ -4,6 +4,7 @@ namespace IGC\Tart\Tests\Unit;
 
 use IGC\Tart\Support\Select;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 class SelectTest extends TestCase
@@ -47,6 +48,18 @@ class SelectTest extends TestCase
         $result = $select->ask();
 
         $this->assertNull($result);
+    }
+
+
+    public function test_select_required_throws_when_options_are_empty(): void
+    {
+        $this->expectException(RuntimeException::class);
+
+        $output = new BufferedOutput();
+
+        $select = new Select($output, 'Choose option', []);
+        $select->setRequired(true);
+        $select->ask();
     }
 
     public function test_select_can_set_required(): void

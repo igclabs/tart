@@ -15,6 +15,18 @@ return [
     */
     'auto_answer' => false,
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Demo Command Registration
+    |--------------------------------------------------------------------------
+    |
+    | Controls whether package demo commands are registered with Artisan.
+    | Disable in production to keep your command namespace clean.
+    |
+    */
+    'register_demo_commands' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Theme Defaults

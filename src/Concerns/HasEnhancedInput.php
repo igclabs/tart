@@ -4,6 +4,7 @@ namespace IGC\Tart\Concerns;
 
 use Closure;
 use IGC\Tart\Support\FrameRenderer;
+use IGC\Tart\Support\TerminalMode;
 
 trait HasEnhancedInput
 {
@@ -90,13 +91,16 @@ trait HasEnhancedInput
      */
     protected function getHiddenInputUnix(): string
     {
-        $sttyMode = shell_exec('stty -g');
+        $terminal = new TerminalMode();
 
+        $terminal->enableRawMode();
         shell_exec('stty -echo');
-        $answer = trim((string) fgets(STDIN));
-        shell_exec(sprintf('stty %s', $sttyMode));
 
-        return $answer;
+        try {
+            return trim((string) fgets(STDIN));
+        } finally {
+            $terminal->restore();
+        }
     }
 
     /**
