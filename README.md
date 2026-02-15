@@ -421,6 +421,7 @@ $this->setTheme($theme);
 
 ## 📚 Documentation
 
+- **[Usage Guide](docs/USAGE.md)** - Practical, task-focused guide to using TART in real commands
 - **[Getting Started](docs/GETTING-STARTED.md)** - Installation and first steps
 - **[Quick Reference](docs/guides/QUICK-REFERENCE.md)** - Complete API reference
 - **[Logo Creation](docs/guides/LOGO-CREATION.md)** - Logo generation guide
