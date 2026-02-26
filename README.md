@@ -4,7 +4,8 @@
 
 <p align="center">
   <strong>Terminal Art for Artisan</strong><br>
-  <em>A beautiful, expressive terminal UI toolkit for PHP console applications</em>
+  <em>A beautiful, expressive terminal UI toolkit for PHP console applications</em><br><br>
+  <a href="https://www.intelligentgraphicandcode.com/resources/tart">Full Documentation</a>
 </p>
 
 ---
