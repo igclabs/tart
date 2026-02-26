@@ -1,18 +1,10 @@
-# TART 🎨
+# TART 
 
-<p align="center">
-  <img src="https://www.intelligentgraphicandcode.com/storage/img/igc-tart-logo_1763304567.png" alt="TART Logo" width="400">
-</p>
+![Tart Logo](https://www.intelligentgraphicandcode.com/storage/img/tart-banner_zieJhp.jpg)
 
 <p align="center">
   <strong>Terminal Art for Artisan</strong><br>
   <em>A beautiful, expressive terminal UI toolkit for PHP console applications</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/php-%5E8.2-blue" alt="PHP Version">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-  <img src="https://img.shields.io/badge/version-1.1.18-brightgreen" alt="Version">
 </p>
 
 ---
